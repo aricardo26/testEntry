@@ -1,0 +1,16 @@
+<app-headers [help]="true" [shops]="true" [login]="true" [cart]="true" [seller]="true"
+             [shop]="true" [loguin]="true" [zipcode]="false"></app-headers>
+
+<section class="deparments" style="    padding-top: 135px;">
+  <div fxLayout="row" style="padding-left: 70px; padding-right: 70px;">
+    <div fxFlex="60%" fxFlexOffset="3%" class="mt-5">
+      <p class="font-source-pro" style="font-size: 34px; font-weight:bold;">Departamentos</p>
+    </div>
+  </div>
+
+  <app-departments [subcategory]=true class="deparments_list"></app-departments>
+
+</section>
+
+
+<app-footer [phrase]="false" [strawberry]="true"></app-footer>

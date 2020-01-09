@@ -1,0 +1,81 @@
+.mat-raised-button.mat-primary {
+  background-color: #6B9111;
+  line-height: 36px;
+  font-weight: 600;
+  color: white;
+  padding: 0 80px;
+  box-shadow: none;
+  border-radius: 25px;
+}
+.mat-raised-button.mat-secundary {
+  color: #6B9111;
+  font-weight: 600;
+  line-height: 36px;
+  padding: 0 30px;
+  box-shadow: none;
+  background-color: #E3E3E3;
+  border-radius: 25px;
+}
+
+
+.mat-raised-button.mat-primary:focus{
+  outline:none !important;
+}
+.mat-dialog-message{
+  padding: 75px 100px 50px 100px;
+  background: url('../../../../assets/img/planta.png') 0 bottom/145px no-repeat,
+  url('../../../../assets/img/img-mint.jpg') right top/135px no-repeat,
+  white !important;
+}
+.dialog-modal-title{
+  font-size: 30px;
+  font-family: var(--font-source-pro);
+  color: #6B9111;
+}
+
+::ng-deep .mat-dialog-container {
+  padding: 0px;
+  overflow-y: -webkit-paged-x;
+}
+
+.mat-dialog-tienda.ng-star-inserted {
+  padding-bottom: 80px;
+}
+
+.banner_tienda_superior{
+  width: 100%;
+}
+.dialog-tienda{
+  margin: 0px;
+}
+.text-tienda{
+  padding-top: 60px;
+  font-weight: bold;
+}
+.text-gray{
+  color: #B0B0B0;
+}
+
+::ng-deep .mat-dialog-content{
+  padding-bottom: 35px;
+}
+
+.dialog-content{
+  font-size: 24px;
+  //font-weight: lighter;
+  text-align: center;
+  font-family: var(--font-source-regular);
+}
+
+.text-user{
+  padding-right: 5px;
+  font-size: 18px;
+  font-family: var(--font-source-pro);
+}
+.username{
+  padding-left: 5px;
+  color: #6B9111;
+  font-size: 18px;
+  font-family: var(--font-source-pro);
+
+}

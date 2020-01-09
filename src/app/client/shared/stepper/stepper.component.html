@@ -1,0 +1,13 @@
+<section class="container">
+  <ul class="nav justify-content-around text-center">
+    <li class="nav-item" *ngFor="let step of steps; let i = index;" (click)="onClick(i)"
+        [ngClass]="{'active': selectedIndex === i}">
+      <a class="nav-link pt-3 text-center d-inline-block" href="#" data-toggle="tab"
+         [ngClass]="{'completed': step.completed}" id="step{{i+1}}"><span>{{i + 1}}</span></a>
+      <p class="text-uppercase" [ngClass]="{'completed': step.completed }">{{step.label}}</p>
+    </li>
+  </ul>
+  <div [style.display]="selected ? 'block' : 'none'">
+    <ng-container [ngTemplateOutlet]="selected.content"></ng-container>
+  </div>
+</section>

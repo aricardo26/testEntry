@@ -1,0 +1,8 @@
+<!--STYLES-->
+<div class="btn-group btn-group-toggle"  data-toggle="buttons">
+    <label *ngFor="let style of styles" class="btn" [title]="style.name">
+      <svg-icon (mouseover)="iconHover(style.id)" (mouseleave)="iconLeave(style.id)"  [src]="'../../../assets/img/styles/'+ style.id +'.svg'"
+                [svgStyle]="{ 'width.px':55, 'height.px':60 }" [applyCss]="true"
+      ></svg-icon>
+    </label>
+</div>

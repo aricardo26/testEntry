@@ -1,0 +1,144 @@
+<div class="navbar-expand-md fixed-top double_nav" data-toggle="affix" fxLayout="column" [ngStyle]="{'width': windowSize}">
+  <div class="navbar bg-white navbar-expand-md pb-0 navbar-light" id="first" fxFlex="100%">
+    <a class="navbar-brand" routerLink="/home">
+      <img alt="Mundo Naturali" class="pb-2" style="width: 42pt; height: 40pt"  src="assets/img/logo.svg">
+      <span>mundo naturali</span>
+    </a>
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end pb-2" id="navcol">
+      <form class="form-inline col-md-6" [@scrollSearchAnimation]="stateSeachAction" *ngIf="search">
+        <div class="input-group col-12">
+          <input class="form-control searsh" type="text" placeholder="{{placeholderSearchText}}">
+          <div class="input-group-append">
+            <button class="btn btn-searsh" type="button">
+              <i class="fa fa-search fa-lg"></i></button>
+          </div>
+        </div>
+      </form>
+      <ul class="nav navbar-nav">
+        <li class="nav-item dropdown" *ngIf="account">
+          <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Mi cuenta</a>
+          <div class="dropdown-menu" role="menu">
+            <a class="dropdown-item" role="presentation" href="#">First Item</a>
+            <a class="dropdown-item" role="presentation" href="#">Second Item</a>
+            <a class="dropdown-item" role="presentation" href="#">Third Item</a>
+            <a class="dropdown-item" role="presentation" href="#">Menu Item</a>
+            <a class="dropdown-item" role="presentation" href="#">Menu Item</a>
+          </div>
+        </li>
+        <li class="nav-item nav-pr" role="presentation" *ngIf="shops">
+          <a class="nav-link" routerLink="../porHacer">Tiendas</a>
+        </li>
+        <li class="nav-item nav-pr" role="presentation" *ngIf="help">
+          <a class="nav-link" routerLink="../help" (click)="logut()" >Ayuda</a>
+        </li>
+        <li class="nav-item nav-pr" role="presentation" *ngIf="seller">
+          <a class="nav-link btn-nav shop_header" routerLink="../register" [ngClass]="{'bg-white': transparent === true}">
+            <span class="shop_icon_header"></span>&nbsp;Quiero vender!</a>
+        </li>
+        <li class="nav-item nav-pr" role="presentation" *ngIf="login">
+          <a class="nav-link btn-nav face-plus" routerLink="../login">
+            <span class="face-plus"></span>&nbsp;Ingresá</a>
+        </li>
+        <li class="nav-item" role="presentation" *ngIf="notify">
+          <a class="nav-link" href="#"><i class="far fa-bell"></i>
+            <span class="notification">.</span></a>
+        </li>
+        <li class="nav-item" role="presentation" *ngIf="cart">
+          <a class="nav-link cart" href="#">
+            <i class="carrito"></i>
+<!--            Cantidad de productos en carro-->
+            <span class="ml-2 mr-1"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+<!--  style="box-shadow: 0 5px 7px 0 #d8d8d8;"-->
+  <div class="navbar navbar-light bg-light navbar-expand-sm m-0 p-0"  fxFlex="100%" id="second" *ngIf="shop" >
+    <div class="container-fluid top-divider row grid-divider align-items-center p-0 m-0">
+      <div class="col-sm-2" *ngIf="loguin">
+        <a type="button" class="datazip">
+          <div class="row justify-content-left tienda ml-2 d-block">
+            <div class="row ml-1 align-items-center">
+              <span class="amount"><i class="fa fa-map-marker-alt fa-lg"></i></span>
+              <div class="align-self-end ml-2" *ngIf="zipcode === true  && loguin === true">
+                <p class="d-block mb-0" style="color: #E46600;">Estas en</p>
+                <h6 class="d-block text-uppercase mb-0" style="color: #E46600;"><strong>buenos aires 1414</strong></h6>
+              </div>
+              <div class="align-self-end ml-2" *ngIf="zipcode === false  && loguin === true">
+                <p class="d-block mb-0 panadi" style="color: #E46600;">Añadi</p>
+                <h6 class="d-block text-uppercase mb-0 pdireccion" style="color: #E46600;"><strong>tu dirección</strong></h6>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-2" [ngClass]="{'hidden':state === false, 'visible':state === true}"
+           [@scrollAnimation]="stateAction" *ngIf="loguin">
+        <div class="row align-items-center tienda ml-2 d-block">
+          <div class="row ml-1 align-items-center"><span class="amount">
+          <img src="../../../../assets/img/shops-logo.png" style="width: 45px;"
+               class="circle slick-initialized slick-slider" alt="title" routerLink="shops-profile"></span>
+            <div class="align-items-center ml-2">
+              <h6 class="d-block text-uppercase mb-0"><strong>Nombre de ...</strong></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div [ngClass]="{'col-sm-8':state === false, 'col-sm-10': loguin === false, 'col-sm-6':state === true}">
+        <div class="row align-items-center tienda ml-1 d-block">
+          <div class="row ml-1 align-items-center">
+            <div class="align-items-center ">
+              <div class="btn-group show-on-hover">
+                <button type="button" class="btn btn-default dropdown-toggle bdepartamentos" data-toggle="dropdown">
+                  Departamentos <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu multi-level lvl1" role="menu">
+                  <li class="dropdown-submenu font-source-pro-light size-16 mb-2">
+                    <a tabindex="-1" href="#" class="lvl1a" style="color: #333333"></a>
+                    <ul *ngIf="showHideSub" class="dropdown-menu menulvl1" [ngClass]="{'showDepartment':showHideSub,'hideDepartment':showHideSub }">
+                      <li *ngFor="let sub of subCategories">
+                        <a tabindex="-1" href="#" class="submenulvl1 ">{{sub.name}}</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-submenu font-source-pro-light size-16 mb-2" *ngFor="let deparment of deparments" (mouseover)="hover($event)" (mouseleave)="releaseHover()">
+                    <a tabindex="-1" href="#" class="lvl1a" style="color: #333333" >{{deparment.name}}</a>
+<!--                    <ul class="dropdown-menu menulvl1">-->
+<!--                      <li *ngFor="let sub of deparments">-->
+<!--                        <a tabindex="-1" href="#" class="submenulvl1 ">{{sub.name}}</a>-->
+<!--                      </li>-->
+<!--                      &lt;!&ndash;<li>-->
+<!--                        <div class="catimg">-->
+<!--                          <img src="../../../assets/img/departments/{{deparment.img}}" alt="">-->
+<!--                        </div>-->
+<!--                      </li>&ndash;&gt;-->
+<!--                    </ul>-->
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="align-items-center ml-1">
+              <a class="nav-link btn-nav btn-offers" href="#">ofertas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 embracing d-xs-none">
+        <div style="" class="row align-items-center tienda">
+          <div style="height: 68px;" class="row align-items-center">
+            <h6 class="d-block mb-0">
+              <p class="leisha">mbracing life</p>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

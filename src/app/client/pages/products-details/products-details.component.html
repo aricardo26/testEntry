@@ -1,0 +1,413 @@
+<app-headers [search]="true" [help]="true" [account]="true" [notify]="true" [cart]="true" [shop]="true"
+placeholderSearchText="Encontrá los productos que querés"></app-headers>
+<app-breadcrumb></app-breadcrumb>
+
+<div class="container pb-5 product prod-prhace">
+  <!-- Start: bock detail -->
+  <div class="row p_details_container">
+    <!-- Start: galery -->
+    <div class="col-6">
+      <div class="row">
+        <!-- Start: list img -->
+        <div class="justify-content-around list-gallery col-2">
+          <img *ngFor="let image of productDetails.images" alt=""
+               [src]="'../../../../assets/img/media/products/'+productDetails.id+'/'+image"
+               (click)="selectImage(image)">
+        </div>
+        <!-- End: list img -->
+        <div class="col-10 row">
+          <div class="col-12 product_img_cont">
+            <img alt="" class="img-thumbnail mb-1 mt-3 product_img"
+                 [src]="'../../../../assets/img/media/products/'+productDetails.id+'/'+imageSelected">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End: galery -->
+    <!-- Start: data -->
+    <div class="col-6 details">
+      <div class="above_title" fxLayout="row">
+        <p class="product_category text-uppercase">{{productDetails.category}}</p>
+        <p class="product_sold"> · {{productDetails.cant_sold}} vendido · </p>
+        <p class="product_stock text-uppercase" *ngIf="inStock">EN STOCK</p>
+      </div>
+      <h4>{{productDetails.name}}</h4><label>{{productDetails.unit}}</label>
+      <!-- Start: rate -->
+      <div class="row pl-3 rate"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+        class="fa fa-star"></i><i class="fa fa-star-half-o"></i>
+        <p class="ml-3">{{productDetails.opinions.length}} calificá este producto </p>
+      </div>
+      <!-- End: rate -->
+      <!-- Start: block -->
+      <div class="row">
+        <div class="col price">
+          <label class="d-block">De:</label>
+          <label class="d-block"><span
+            class="old_price">{{productDetails.currency.symbol}}{{getPrice(2)}}</span>&nbsp;<span
+            class="porcent">({{discountPercent}}%)</span></label>
+          <label class="d-block">Ahora:</label>
+          <p>{{productDetails.currency.symbol}}{{getPrice(1)}}</p>
+        </div>
+        <div class="col time">
+          <p class="pink"><i class="far fa-clock" aria-hidden="true"></i> Vence en 15 días</p>
+          <p class="pink"> Máximo por clientes: {{productDetails.max_byClient}}</p>
+          <label class="text-uppercase">COMPARTÍ</label>
+          <div class="row networks">
+            <a href="#" class="mx-1"><i class="fab fa-facebook-f icon"></i></a>
+            <a href="#" class="mx-1"><i class="fab fa-instagram icon"></i></a>
+            <a href="#" class="mx-1"><i class="fab fa-twitter icon"></i></a>
+            <a href="#" class="mx-1"><i class="fab fa-youtube icon"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- End: block -->
+      <div class="style">
+        <div class="col p-0">
+          <p class="product_style">Estilo de nutrición</p>
+          <app-filter-style [styles]="productDetails.styles"></app-filter-style>
+        </div>
+      </div>
+
+      <!-- Start: amount -->
+      <div class="row amount">
+        <div class="col">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <button class="btn btn-primary" type="button">-</button>
+            </div>
+            <input class="form-control text-center" type="text" placeholder="Cantidad">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <button class="btn btn-primary add-cart" type="button">Añadir al carrito</button>
+        </div>
+      </div>
+      <!-- End: amount -->
+    </div>
+    <!-- End: data -->
+  </div>
+  <!-- End: bock detail -->
+  <hr class="hr_details">
+  <!-- Start: descrip -->
+  <div class="descrip">
+
+    <div class="row">
+      <!-- Start: bloks -->
+      <div class="col ml-3 pr-5">
+        <h3 class="text-uppercase pb-2">detalles del producto</h3>
+        <!-- Start: block -->
+        <div *ngFor="let detail of productDetails.details" class="block d-block">
+          <h6 class="marginBottomOut">{{detail.title}}</h6>
+          <p [ngClass]="{'details_mb': detail.recomend, 'pb-4': !detail.recomend}">{{detail.desc}}</p>
+          <p class="aster" *ngIf="detail.recomend"><label class="text-uppercase">{{detail.recomend}}</label>*</p>
+        </div>
+        <!-- End: block -->
+      </div>
+      <!-- End: bloks -->
+      <!-- Start: info -->
+      <div class="col bg-white">
+        <div class="info mb-3 ml-5 pb-4 pl-5 mr-5">
+          <h3 class="text-uppercase pb-3">información nutricional(*)</h3>
+          <div *ngFor="let nutricional_info of productDetails.nutrition.nutricional_info;">
+            <label class="d-block">{{nutricional_info.title}}&nbsp;<span>{{nutricional_info.desc}}</span></label>
+            <label class="dotted pb-2"></label>
+          </div>
+
+          <div class="pt-2" *ngFor="let nutricional_details of productDetails.nutrition.nutricional_details;">
+            <label class="d-block pb-2">&nbsp;<span>{{nutricional_details.title}}</span></label>
+            <label class="marginBottomOut"
+                   *ngFor="let nutricional_details_list of nutricional_details.desc">- {{nutricional_details_list}}</label>
+          </div>
+        </div>
+      </div>
+      <!-- End: info -->
+    </div>
+  </div>
+  <!-- End: descrip -->
+
+  <div class="row saler-info">
+    <!-- Start: info saler -->
+    <div class="col-8 saler px-5 py-3">
+      <div class="justify-content-between row">
+        <h4 class="text-uppercase">Información del vendedor</h4><a href="#"><span style="text-decoration: underline;">ir a la tienda</span></a>
+      </div>
+      <div class="row mt-2">
+        <div class="col-2"><img class="logo_shop"
+                                [src]="'../../../../assets/img/media/shops/'+shops.id+'/'+shops.images['0']" alt="">
+        </div>
+        <div class="col-10">
+          <!-- Start: rate -->
+          <div class="row pl-3 rate">
+            <i *ngFor="let stars of shops.ratings" class="fa fa-star"></i>
+            <p class="ml-1">{{shops.opinions.length}} opiniones </p>
+          </div>
+          <!-- End: rate -->
+          <h2 class="text-uppercase pt-2">{{shops.name}}</h2>
+          <p class="d-inline"><i class="fas fa-map-marker-alt pr-1"></i>{{shops.address}} </p>
+          <div class="row pl-3">
+            <label>{{shops.cant_products}} productos</label>
+            <label class="ml-2" *ngIf="shops.local_delivery">&nbsp;<i class="fa fa-bicycle mr-1"
+                                                                      style="padding-top: 2px"></i><span
+              class="text-uppercase"><strong>Entrega local</strong></span></label>
+            <label class="ml-2" *ngIf="shops.home_withdrawal">&nbsp;<i class="fas fa-shopping-basket mr-1"
+                                                                       style="padding-top: 2px"></i><span
+              class="text-uppercase"><strong>Retiro en el domicilio</strong></span></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End: info saler -->
+    <!-- Start: product-bar -->
+    <div class="col-4 saler px-5 py-3">
+      <div class="justify-content-between row ">
+        <h4 class="text-uppercase"></h4><a href="#"><span style="text-decoration: underline;">más datos</span></a>
+      </div>
+      <div class="container-bar-product h-75 row" fxLayout="row" fxLayoutAlign="start end">
+        <div class=" bar-product w-100">
+          <!-- Start: block bar -->
+          <div class="d-block pb-2">
+            <p>Brinda Buena Atención</p>
+            <img class="pb-2 pr-2" src="../../../../assets/img/progress-clientes.png" alt="">
+            <div class="progress w-75 d-inline-flex">
+              <div class="progress-bar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
+                   [ngStyle]="{'width': getPercentToProcess(1000, 465)}">
+              </div>
+            </div>
+            <label class="ml-2">465</label>
+          </div>
+          <!-- End: block bar -->
+          <!-- Start: block bar -->
+          <div class="d-block">
+            <p>Despacha sus productos a tiempo</p>
+            <img class="pb-3 pr-2" src="../../../../assets/img/progress-envio.png" alt="">
+            <div class="progress w-75 d-inline-flex">
+              <div class="progress-bar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"
+                   [ngStyle]="{'width': getPercentToProcess(1000, 230)}">
+              </div>
+            </div>
+            <label class="ml-2 mb-0">230</label>
+            <!-- End: block bar -->
+          </div>
+        </div>
+      </div>
+      <!-- End: product-bar -->
+    </div>
+    <!-- End: info -->
+    <!-- Start: other -->
+    <div class=" col-12 bg-white other-products">
+      <div class="container">
+        <h3 class="text-uppercase py-3 pt-4">Otros productos del vendedor</h3>
+        <!-- Start: list card products -->
+        <div class="row justify-content-around">
+          <div class="col-12">
+            <app-carousel [type]="'most_seller'" [location]="false" count=5></app-carousel>
+          </div>
+        </div>
+        <!-- End: list card products -->
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Start: valoracion -->
+    <div class="valoracion mx-4">
+      <hr>
+      <h4 class="text-uppercase d-block">Valoraciones de los clientes</h4>
+      <div class="row">
+        <!-- Start: rates -->
+        <div class="col saler">
+          <!-- Start: rates -->
+          <div class="row">
+            <div class="col-2"><label>4,2</label></div>
+            <div class="col align-self-center rates">
+              <!-- Start: rate -->
+              <div class="row pl-3 rate d-block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></div>
+              <!-- End: rate -->
+              <p class="d-block">promedio de &nbsp;<span>1547 opiniones<br></span></p>
+            </div>
+          </div>
+          <!-- End: rates -->
+          <hr class="mr-5 mb-3 mt-1">
+          <!-- Start: scroller -->
+          <div class="col scrolles ml-4">
+            <!-- Start: scroll -->
+            <div class="align-items-baseline row">
+              <p class="pr-3 mb-0 text-right" style="width: 80px">5 estrellas</p>
+              <div class="progress w-50 mr-2">
+                <div class="progress-bar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                     [ngStyle]="{'width': getPercentToProcess(1547, 800)}">
+                </div>
+              </div>
+              <label class="pl-1">800</label></div>
+            <!-- End: scroll -->
+            <!-- Start: scroll -->
+            <div class="align-items-baseline row">
+              <p class="pr-3 mb-0 text-right" style="width: 80px">4 estrellas</p>
+              <div class="progress w-50 mr-2">
+                <div class="progress-bar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
+                     [ngStyle]="{'width': getPercentToProcess(1547, 650)}">
+                </div>
+              </div>
+              <label class="pl-1">650</label></div>
+            <!-- End: scroll -->
+            <!-- Start: scroll -->
+            <div class="align-items-baseline row">
+              <p class="pr-3 mb-0 text-right" style="width: 80px">3 estrellas</p>
+              <div class="progress w-50 mr-2">
+                <div class="progress-bar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+                     [ngStyle]="{'width': getPercentToProcess(1547, 52)}">
+                </div>
+              </div>
+              <label class="pl-1">52</label></div>
+            <!-- End: scroll -->
+            <!-- Start: scroll -->
+            <div class="align-items-baseline row">
+              <p class="pr-3 mb-0 text-right" style="width: 80px">2 estrellas</p>
+              <div class="progress w-50 mr-2">
+                <div class="progress-bar" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"
+                     [ngStyle]="{'width': getPercentToProcess(1547, 45)}">
+                </div>
+              </div>
+              <label class="pl-1">45</label></div>
+            <!-- End: scroll -->
+            <!-- Start: scroll -->
+            <div class="align-items-baseline row">
+              <p class="pr-3 mb-0 text-right" style="width: 80px">1 estrella</p>
+              <div class="progress w-50 mr-2">
+                <div class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                     [ngStyle]="{'width': getPercentToProcess(1547, 0)}">
+                </div>
+              </div>
+              <label class="pl-1">0</label></div>
+            <!-- End: scroll -->
+          </div>
+          <!-- End: scroller -->
+          <hr class="mr-5 mb-4">
+          <div class="justify-content-center row mr-5">
+            <button class="btn btn-primary" type="button">escribí un comentario</button>
+          </div>
+        </div>
+        <!-- End: rates -->
+        <!-- Start: comments -->
+        <div class="col comments"><label>235 opiniones • 3 respuestas </label>
+          <!-- Start: comment -->
+          <div class="comment pb-4">
+            <!-- Start: rate -->
+            <div class="row pl-3 rate d-block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+              class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></div>
+            <!-- End: rate --><label class="user">María del Carmen&nbsp;<span>24/02/2015<br></span></label>
+            <h5>Me encantó hasta el empaque..todo!!</h5>
+            <p>texto falso, texto falso texto falso, texto falsotexto falso, texto falso, texto falso, texto falsotexto
+              falso, texto falso,texto falso, texto falso texto falso, texto falsotexto</p>
+            <div class="row align-items-baseline">
+              <button class="btn btn-primary ml-3 mr-3" type="button">Me sirvió</button>
+              <p><a href="#" class="mr-2 green">Responder&nbsp;</a>•&nbsp;<a href="#" class="mr-2">Denunciar </a></p>
+            </div>
+          </div>
+          <!-- End: comment -->
+          <!-- Start: comment -->
+          <div class="comment">
+            <!-- Start: rate -->
+            <div class="row pl-3 rate d-block"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+              class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></div>
+            <!-- End: rate --><label class="user">María del Carmen&nbsp;<span>24/02/2015<br></span></label>
+            <h5>Me encantó hasta el empaque..todo!!</h5>
+            <p>texto falso, texto falso texto falso, texto falsotexto falso, texto falso, texto falso, texto falsotexto
+              falso, texto falso,texto falso, texto falso texto falso, texto falsotexto</p>
+            <div class="row align-items-baseline">
+              <button class="btn btn-primary ml-3 mr-3" type="button">Me sirvió</button>
+              <p><a href="#" class="mr-2 green">Responder&nbsp;</a>•&nbsp;<a href="#" class="mr-2">Denunciar </a></p>
+            </div>
+          </div>
+          <!-- End: comment -->
+        </div>
+        <!-- End: comments -->
+      </div>
+    </div>
+    <!-- End: valoracion -->
+  </div>
+  <hr class="mt-5">
+  <div class="faq row">
+    <!-- End: other -->
+    <!-- Start: valoracion -->
+    <div class="mx-4 questions w-100">
+      <h4 class="text-uppercase d-block mb-0">Preguntas y Respuestas</h4>
+      <label class="pb-4">Querés saber algo? Preguntale al vendedor</label>
+      <div class="row">
+        <div class="col-7">
+          <input id="question" type="text" class="form-control" placeholder="Escribí tu pregunta"/>
+        </div>
+        <div>
+          <button class="btn btn-primary" type="button">preguntar</button>
+        </div>
+      </div>
+      <label class="subinput">Tiempo estimado de respuesta 30min</label>
+      <div class="row mt-3">
+        <div class="col-10">
+          <ngb-accordion #acc="ngbAccordion" activeIds="config-panel-one">
+            <ngb-panel id="1">
+              <ng-template ngbPanelHeader >
+                <div class="d-flex align-items-center" >
+                  <img (click)="acc.toggle('1')" class="ico" src="../../../../assets/img/question.svg" alt="">
+                  <h5 (click)="acc.toggle('1')">Hola, me podés decir si las embarazadas podemos consumirlo? Gracias!</h5>
+                </div>
+              </ng-template>
+              <ng-template ngbPanelContent >
+                <div class="d-flex align-items-start">
+                  <div>
+                    <img class="ico mr-2 mt-2" src="../../../../assets/img/answer.svg" alt="">
+                  </div>
+                  <div>
+                    Es un producto natural, pero no se recomienda abusar de su consumo en diabéticos o embarazadas. Consultá con tu médico si lo querés usar como sustituto de edulcorantes. Gracias!!!!
+                  </div>
+                </div>
+              </ng-template>
+            </ngb-panel>
+            <ngb-panel id="2">
+              <ng-template ngbPanelHeader>
+                <div class="d-flex align-items-center">
+                  <img (click)="acc.toggle('2')" class="ico" src="../../../../assets/img/question.svg" alt="">
+                  <h5 (click)="acc.toggle('2')">Cuántas botellas vienen en 1 caja? Tenés precios mayoristas?</h5>
+                </div>
+              </ng-template>
+              <ng-template ngbPanelContent>
+                <div class="d-flex align-items-start">
+                  <div>
+                    <img class="ico mr-2 mt-2" src="../../../../assets/img/answer.svg" alt="">
+                  </div>
+                  <div>
+                    En una caja vienes 24 botellas y el precio para compras mayoristas es de $20,50. Gracias!!
+                  </div>
+                </div>
+              </ng-template>
+            </ngb-panel>
+            <ngb-panel id="3">
+              <ng-template ngbPanelHeader>
+                <div class="d-flex align-items-center">
+                  <img (click)="acc.toggle('3')" class="ico" src="../../../../assets/img/question.svg" alt="">
+                  <h5 (click)="acc.toggle('3')">Quisiera saber si el sirope me servirá para sustituir el azúcar en el café.</h5>
+                </div>
+              </ng-template>
+              <ng-template class="last" ngbPanelContent>
+                <div class="d-flex align-items-start">
+                  <div>
+                    <img class="ico mr-2 mt-2" src="../../../../assets/img/answer.svg" alt="">
+                  </div>
+                  <div>
+                    Sirve como sustituto del azúcar. Gracias!!
+                  </div>
+                </div>
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+        </div>
+      </div>
+    </div>
+    <!-- End: valoracion -->
+  </div>
+</div>
+<app-footer></app-footer>

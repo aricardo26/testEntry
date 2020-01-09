@@ -1,0 +1,502 @@
+body{
+  background-color: white !important;
+}
+
+.shop-title{
+  font-size: 50px;
+  font-family: var(--font-source-bold);
+  margin-top:35px;
+}
+
+.number-products{
+  color: #999;
+  font-size: 18px;
+  font-family: var(--font-source-bold);
+}
+.shop-address{
+  font-size: 18px;
+  margin-left: 50px;
+}
+
+.left-divider {
+  border-right: #efefef solid 2px;
+}
+
+.show-more {
+  cursor: pointer;
+}
+div#collapseStore{
+  background-color: white;
+}
+
+.bottom-divider {
+  border-top: #efefef solid 2px;
+  border-bottom: #efefef solid 2px;
+  height: 50px;
+  background-color: white;
+}
+
+.no-margin {
+  margin-bottom: 0px;
+}
+
+.grid-divider-down > [class*="col-"]:nth-child(3):after {
+  content: "";
+  background-color: #efefef;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: -4px; // quickfix to center line between columns
+  }
+  @media (min-width: 768px) {
+    width: 2px;
+    height: auto;
+    left: -1px; // quickfix to hide divider on left side
+  }
+}
+
+.grid-divider-jobs > [class*="col-"]:nth-child(n + 2):after {
+  content: "";
+  background-color: #efefef;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: -4px; // quickfix to center line between columns
+  }
+  @media (min-width: 768px) {
+    width: 2px;
+    height: auto;
+    left: -1px; // quickfix to hide divider on left side
+  }
+}
+.tabs-shosp{
+  font-family: var(--font-source-ligth);
+  font-size: 14px;
+  color: #999;
+}
+.header-shop {
+  height: 250px;
+  background: url(../../../../assets/img/header-shop.jpg) right/100% 100%;
+  margin-top: 132px;
+}
+
+.star-grey {
+  color: grey;
+  padding: 10px 0;
+}
+
+.star-green {
+  color: var(--ngreen);
+  padding: 10px 0;
+}
+
+.entrega {
+  color: grey;
+  font-weight: 700;
+}
+
+.overlay-gray {
+  background-color: black;
+  height: 250px;
+  opacity: 0.2;
+  position: absolute;
+  width: 100%;
+}
+
+.title-shop {
+  color: white;
+  padding-top: 9rem;
+  margin-left: 2.9rem;
+}
+
+.badge-green {
+  background-color: var(--ngreen);
+}
+
+.fa-bicycle {
+  color: white;
+}
+
+.local {
+  background-color: white;
+  margin-right: 0;
+  padding-right: 0;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+p.shop_header {
+  color: var(--ngreen);
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.shop-icon-logo {
+  background-image: url('../../../../assets/img/shops-icon-white.png');
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 20px;
+  position: absolute;
+  margin-left: -5px;
+  margin-top: 0;
+}
+
+.shop-hornet {
+  background-image: url('../../../../assets/img/hornet.png');
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 20px;
+}
+
+.shop-descrip {
+  background-color: #F8F7EC;
+}
+
+.deliverd-logo {
+  background-image: url('../../../../assets/img/shops-icon.png');
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 20px;
+  position: absolute;
+  margin-left: -16px;
+  margin-top: 5px;
+}
+
+.shop-ubigeos {
+  margin-bottom: 0;
+  margin-left: 40px;
+}
+
+.shop-logo {
+  width: 150px;
+  top: -140px;
+  right: -40px;
+  position: absolute;
+  box-shadow: 0 0 10px #999999;
+  border-radius: 50%;
+}
+
+.shop-logo-footer {
+  width: 125px;
+  position: absolute;
+  box-shadow: 0 0 10px #efefef;
+  border-radius: 50%;
+}
+.owner-name{
+  font-family: var(--font-source-bold);
+  font-size: 18px;
+  color: black;
+}
+.owner-staff{
+  font-family: var(--font-source-light);
+  font-size: 14px;
+  color: black;
+}
+.ventas {
+  color: var(--morange);
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.val-reputacion{
+  font-size: 88px;
+  color: var(--morange);
+  margin-top: -25px !important;
+}
+
+.shop_header span.shop_icon_header {
+  background-image: url(../../../../assets/img/vender_icon.png);
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 34px;
+  position: absolute;
+  margin-left: -5px;
+  margin-top: 9px;
+  background-size: cover;
+}
+
+.more-seller {
+  color: var(--morange) !important;
+  margin-left: 72px;
+  &:after {
+    content: "-";
+    position: absolute;
+    top: 14px;
+    z-index: 5;
+    font-size: 24pt;
+    left: 65.5%;
+  }
+
+  &:before {
+    content: "";
+    height: 40px;
+    width: 150px;
+    background-image: url(../../../../assets/img/notch/notch-white.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 20px;
+    z-index: 2;
+  }
+
+  &[aria-expanded="true"] {
+    &:after {
+      content: "+";
+      left: 64%;
+    }
+  }
+}
+
+.badge-orange {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: var(--morange);
+}
+
+// PILLS
+::ng-deep .nav-tabs .nav-link {
+  border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
+  color: gray;
+  font-weight: bold;
+}
+
+.content-pills {
+  padding: 3rem 6rem 6rem;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+.head_label {
+  color: var(--help-gray);
+
+}
+
+.ubication_value {
+  color: var(--mfuschia);
+  font-weight: bold;
+}
+
+::ng-deep .nav-link {
+  display: block;
+  padding: 0.5rem 6rem;
+}
+
+::ng-deep .nav-tabs {
+  background-color: #efefef;;
+}
+
+::ng-deep .nav-tabs .nav-link.active {
+  color: var(--ngreen);
+  font-weight: bold;
+}
+
+::ng-deep .nav-tabs .nav-link.active:after {
+  content: '';
+  background-color: #EE6C01;
+  position: absolute;
+  top: 10px;
+  bottom: 0px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+@keyframes myChange {
+  from {
+    height: 100px;
+    display: block;
+  }
+  to {
+    height: 0;
+    display: none;
+  }
+}
+
+div.pills-show {
+  animation: 0.5s myChange;
+}
+
+// GALLERY
+.container img {
+  width: 100px;
+  height: 90px;
+  object-fit: cover;
+  margin: 5px;
+  cursor: pointer;
+}
+
+::ng-deep .ngx-gallery-thumbnail.ngx-gallery-clickable.ng-star-inserted:after {
+  background-image: url(../../../../assets/img/img-plus.png);
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 85px;
+  top: 68px;
+}
+
+.rank-hojas {
+  top: 22px;
+  position: absolute;
+  right: 65px;
+}
+
+.premiun {
+  font-size: 14px;
+  color: var(--ngreen);
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+.span-img {
+  position: absolute;
+  top: 6px;
+}
+
+.italic-span {
+  font-size: 14px;
+  color: var(--header-gray);
+}
+
+::ng-deep .progress {
+  border-radius: 10px;
+  background-color: #F1EFD8;
+  height: 0.5rem;
+}
+
+::ng-deep .progress-bar {
+  border-radius: 10px;
+}
+
+::ng-deep .bg-success {
+  background-color: #6B9111 !important;
+}
+
+::ng-deep .bg-info {
+  background-color: #DDD69E !important;
+}
+
+.value-span {
+  margin-bottom: 0;
+  position: absolute;
+  top: 12px;
+  color: #6B9111;
+}
+
+.comments {
+  padding-bottom: 1rem;
+  padding-left: 15px;
+  padding-right: 60px;
+}
+
+.comment {
+  border-top: dotted 1px gray;
+  padding-bottom: 1rem;
+  margin-left: 0px;
+}
+
+.good-answer {
+  background-image: url('../../../../assets/img/good-answer.png');
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 20px;
+}
+
+///EMPLEOS
+.content-employes {
+  padding: 3rem 20rem 6rem 6rem;
+}
+
+.nolink {
+  color: #333333;
+}
+
+
+button {
+  font-weight: 700;
+  font-size: 14px;
+  font-family: var(--font-source-pro);
+  background-color: transparent;
+  color: var(--green-button);
+  border-radius: 20px;
+  border-color: var(--green-button);
+
+  &:hover {
+    color: white;
+    background-color: var(--ngreen);
+  }
+}
+
+::ng-deep {
+  ngb-accordion.accordion {
+    width: 100%;
+  }
+
+  .card-header {
+    background-color: transparent;
+    border-bottom: none;
+  }
+
+  .card {
+    border: unset;
+    border-radius: unset;
+  }
+
+  .card-body {
+    border-bottom: 2px solid rgb(240, 240, 240);
+  }
+
+  button {
+    &.btn.btn-link.ng-star-inserted {
+      width: 100%;
+    }
+    &.btn.btn-link.ng-star-inserted[aria-expanded="false"] {
+      border-bottom: 2px solid rgb(240, 240, 240);
+    }
+
+    &.btn-link:hover {
+      text-decoration: unset !important;
+      color: transparent;
+    }
+
+    &[aria-expanded="true"] {
+      .expand-jobs {
+        display: none;
+      }
+      .btn.btn-link.ng-star-inserted {
+        border-bottom: none !important;
+      }
+
+    }
+
+    .op-seller {
+      &:before {
+        transform: rotate(20deg);
+      }
+    }
+  }
+
+  .op-seller {
+    &:before {
+      content: "»"
+    }
+  }
+}
+
+

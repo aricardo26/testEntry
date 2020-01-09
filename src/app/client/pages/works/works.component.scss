@@ -1,0 +1,88 @@
+.select-state{
+  background-color: transparent !important;
+}
+.btn:focus, .btn.focus {
+  box-shadow: none;
+}
+.job-header {
+  padding-top: 50px;
+  height: 400px;
+  background: url('../../../../assets/img/man.jpg') 0/100% 130% no-repeat;
+  p {
+    font-family: var(--font-source-pro);
+    font-weight: 600;
+    font-size: 38.72pt;
+    color:white;
+    span {
+      font-family: var(--font-leisha);
+      font-weight: 400;
+      font-size: 67.77pt;
+      color:white;
+      text-transform: lowercase;
+    }
+  };
+  .search {
+    height: 55px;
+    border-radius: 10px;
+    margin-left: 8rem;
+    background-color:white;
+    .map-marker{
+      font-size:2rem;
+      color:#E66600;
+      padding-right:0;
+    };
+    .select-state{
+      height:50px;
+      padding-left:0;
+      margin: -2rem;
+      border:0;
+      background-color: #F2F2F2;
+    };
+    .col-8 {
+      padding-right: 0px;
+      padding-left: 0px;
+      form {
+        .input-group{
+          height:55px;
+          .input-group-text {
+            background-color: white;
+            border: 0;
+          };
+          .fa-search {
+            font-size:2rem;
+            color:#E66600;
+          };
+          input {
+            border: 0;
+          };
+          button {
+            color: white;
+            font-family: var(--font-source-pro);
+            font-weight: 600;
+            font-size: 20pt;
+            background-color:#E66600 !important;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+          };
+        };
+      };
+    };
+  };
+};
+.job-title {
+  display: inline-flex;
+  p {
+    color: var(--ngreen);
+    font-family: var(--font-source-pro);
+    font-weight: 200;
+    font-size: 24pt;
+  };
+};
+.job-cards{
+  background:#E4E4E4;
+  h1 {
+    font-family: var(--font-source-pro);
+    font-weight: bold;
+    font-size: 36pt;
+  }
+}

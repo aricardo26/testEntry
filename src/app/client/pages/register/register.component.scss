@@ -1,0 +1,79 @@
+body {
+
+  background-color: rgb(252, 250, 244);
+  overflow-x: hidden;
+
+  nav {
+    background-color: #FFF;
+  }
+
+  .form-2 {
+    background: white;
+    border-radius: 10px;
+    &:before {
+      content: "";
+      background: url('../../../../assets/img/frutas.svg') no-repeat;
+      height: 200px;
+      width: 160px;
+      position: absolute;
+      left: 16%;
+      top: 32%;
+      z-index: -1;
+    }
+    input {
+      background-color: var(--input-background);
+    }
+    a {
+      font-weight: 400;
+      font-size: 14px;
+      font-family: var(--font-source-pro);
+      color: rgb(237, 107, 0) !important;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 24px;
+      font-family: var(--font-source-pro);
+    }
+
+    h5 {
+      font-weight: 400;
+      font-size: 24px;
+      font-family: var(--font-bree-regular);
+      color: var(--green-button);
+    }
+
+    label {
+      font-weight: 200;
+      font-size: 16px;
+      font-family: var(--font-source-pro);
+      color: var(--input-label-color);
+      margin-bottom: 0;
+    }
+
+    p {
+      font-weight: lighter;
+      font-size: 14px;
+      font-family: var(--font-source-pro);
+      color: #808080;
+    }
+
+    button {
+      font-weight: 700;
+      font-size: 14px;
+      font-family: var(--font-source-pro);
+      background-color: var(--green-button);
+      color: #FFF;
+      border-radius: 20px;
+
+      &:hover {
+        color: var(--ngreen);
+      }
+    }
+
+    .data-user {
+      background: #F0F0F0 !important;
+    }
+  }
+
+}

@@ -1,0 +1,214 @@
+.image-header {
+  background: #6B9110 url('../../../../assets/img/why_sell.jpg') no-repeat scroll 50% 21%;
+  height: 693px;
+  margin-top: 65px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .main_title {
+    font-family: var(--font-source-bold);
+    font-size: 63px;
+    padding-top: 7rem;
+  }
+
+  .secondary_title {
+    font-family: var(--font-source-ligth);
+    font-weight: normal;
+    padding-top: 4rem;
+    font-size: 30px;
+  }
+}
+.unete{
+  background: url('../../../../assets/img/olivo-derecha.svg')no-repeat left -40px top 0px;
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-color: white;
+}
+
+.head{
+  font-size: 36px;
+  font-family: var(--font-source-bold);
+}
+
+.sub{
+  font-size: 55px;
+}
+
+.subleisha{
+  font-size: 46px;
+  color: #B0B0B0;
+  margin-top: -20px;
+}
+
+.leisha-carousel{
+  font-size: 36px;
+  color: var(--orange);
+  //margin-top: -20px;
+}
+
+.second{
+  font-size: 24px;
+  color: #969696;
+  font-family: var(--font-source-pro);
+  margin-top: -20px;
+}
+
+.btn-compra{
+  background-color: #6B9111 !important;
+  border-color: #6B9111 !important;
+  color: white;
+  font-family: var(--font-source-pro);
+  font-size: 16pt;
+  border-radius: 25px;
+  min-width: 20%;
+}
+.btn-compra-outline{
+  background-color: transparent !important;
+  border-color: #6B9111 !important;
+  color: #6B9111;
+  font-family: var(--font-source-pro);
+  font-size: 18px;
+  border-width: medium;
+  border-radius: 25px;
+  min-width: 20%;
+}
+
+.strawberry {
+  position: relative;
+  right: 60px;
+  bottom: -153px;
+  z-index: 10;
+  height: 155px;
+  width: 80px;
+  margin-top: -115px;
+}
+.onions {
+   position: relative;
+   right: 271px;
+   bottom: 85px;
+   z-index: 10;
+   height: 155px;
+   width: 80px;
+   margin-top: -115px;
+}
+
+.color-fill {
+  fill: #C9C9C9 !important;
+}
+
+.box_why{
+  border:solid 1px #F0F0F0;
+  height:326px;
+  background-color: #EFEFEF;
+  border-radius: 15px;
+  padding:2rem 1rem;
+  &:before {
+    content: "";
+    background-image: url('../../../../assets/img/hojitas-01.svg');
+    background-repeat: no-repeat;
+    background-position: 30px 0px;
+    opacity: 0.4;
+    height: 57px;
+    width: 160px;
+    position: absolute;
+    left: 22%;
+    top: 18%;
+  };
+  .logo{
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 80px;
+    z-index: 5144;
+    padding-bottom: 7rem;
+    padding-left: 7rem;
+    padding-top: 1rem;
+  };
+  .card-1{
+    background-image: url('../../../../assets/img/cards/card-1.svg');
+  };
+  .card-2{
+    background-image: url('../../../../assets/img/cards/card-2.svg');
+  };
+  .card-3{
+    background-image: url('../../../../assets/img/cards/card-3.svg');
+    width: 90px !important;
+  };
+  .card-4{
+    background-image: url('../../../../assets/img/cards/card-4.svg');
+    width: 90px !important;
+  };
+  .card-5{
+    background-image: url('../../../../assets/img/cards/card-5.svg');
+    width: 90px !important;
+  };
+  .card-6{
+    background-image: url('../../../../assets/img/cards/card-6.svg');
+    width: 100px !important;
+  };
+  .card-7{
+    background-image: url('../../../../assets/img/cards/card-7.svg');
+  };
+  .card-8{
+    background-image: url('../../../../assets/img/cards/card-8.svg');
+    width: 110px !important;
+  };
+  .card-9{
+    background-image: url('../../../../assets/img/cards/card-9.svg');
+    width: 90px !important;
+  };
+  .card-10{
+    background-image: url('../../../../assets/img/cards/card-10.svg');
+    width: 90px !important;
+  };
+  .card-11{
+    background-image: url('../../../../assets/img/cards/card-11.svg');
+    width: 90px !important;
+  };
+  .card-12{
+    background-image: url('../../../../assets/img/cards/card-12.svg');
+    width: 90px !important;
+  };
+  h5{
+    font-weight: 800;
+    font-size: 16.32px;
+    font-family: var(--font-source-pro);
+  };
+  p{
+    font-weight: 200;
+    font-size: 16.32px;
+    font-family: var(--font-source-pro);
+  };
+  .green{
+    font-weight: 800;
+    font-size: 18px;
+    font-family: var(--font-source-pro);
+    color: var(--ngreen);
+  };
+  .color-stroke {
+    stroke: var(--ngreen);
+  }
+
+};
+.card{
+  background: transparent;
+  border: transparent;
+}
+
+.heading{
+  font-size: 36px;
+  font-family: var(--font-source-bold);
+}
+.contador{
+  font-size: 24px;
+  color: #CCCCCC;
+  font-family: var(--font-source-pro);
+  font-weight: 800;
+}
+.testimonials {
+  background: url("~src/assets/img/quote.svg") no-repeat top 70px left 20px;
+  background-size: 90px;
+  padding-left: 35px;
+  padding-top: 100px;
+}

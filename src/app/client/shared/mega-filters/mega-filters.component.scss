@@ -1,0 +1,65 @@
+.header-filter{
+  border-bottom: 1.5px solid rgba(204, 204, 204, 0.625);
+}
+.side-bar{
+  background-color: #F8F7EC;
+  margin-left: 20px;
+  i{
+    font-size: 12px;
+    color: #4D4D4D;
+  }
+}
+.filter-content{
+  background-color: white;
+}
+.button-filters{
+  padding: 0 0.75rem 0 0.55rem;
+}
+button {
+  font-weight: 700;
+  font-size: 14px;
+  font-family: var(--font-source-pro);
+  background-color: transparent;
+  color: var(--ngreenClaro);
+  border-radius: 20px;
+  border-color: var(--ngreenClaro);
+
+  &:hover {
+    color: white;
+    background-color: var(--ngreenClaro);
+    .icon-filters{
+      background-image: url('../../../../assets/img/filters-hover.png');
+      background-color: var(--ngreenClaro);
+      }
+    }
+}
+
+::ng-deep .card {
+  background-color: #fff0;
+
+}
+
+::ng-deep .card-body {
+  flex: 1 1 auto;
+  padding: 0;
+}
+
+::ng-deep .card-header {
+  padding: 0.75rem 1.25rem 0.75rem 0;
+}
+
+.icon-filters{
+  background-image: url('../../../../assets/img/filters.png');
+  background-repeat: no-repeat;
+  height: 12px;
+  width: 15px;
+  background-size: cover;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.filters-group{
+  font-family: var(--font-bree-regular);
+  font-size: 16px;
+  color: #4D4D4D;
+}

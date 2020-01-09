@@ -1,0 +1,11 @@
+<div>
+  <div class="container-fluid">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item" *ngFor="let item of bread">
+          <a [routerLink]="item.url" routerLinkActive="active" >{{item.name.es}}</a>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>

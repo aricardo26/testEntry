@@ -1,0 +1,120 @@
+.help-center {
+  height: 460px;
+  background-image: url('../../../../assets/img/img-desktop-salad.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  h1 {
+    font-family: var(--font-leisha);
+    font-size: 71pt;
+    font-weight: 400;
+    color: #4D4D4D;
+  }
+  h2 {
+    font-family: var(--font-bree-regular);
+    font-size: 46pt;
+    font-weight: 400;
+    color: #4D4D4D;
+  }
+  form {
+    width: 650px;
+    input {
+      border-top-left-radius: 20px !important;
+      border-bottom-left-radius: 20px !important;
+      color: #808080;
+      background: #F0F0F0;
+      font-family: var(--font-source-pro);
+      font-size: 14pt;
+      font-weight: 200;
+    }
+
+    button {
+      border-top-right-radius: 20px !important;
+      border-bottom-right-radius: 20px !important;
+      color: white;
+      background: #ED6B00;
+      font-family: var(--font-source-pro);
+      font-size: 18pt;
+      font-weight: 600;
+    }
+  }
+
+}
+
+.description {
+  min-height: 206px;
+  background-image: url('../../../../assets/img/frutas.svg');
+  background-repeat: no-repeat;
+  background-size: 150px 200px;
+  p {
+    color: #808080;
+    font-family: var(--font-source-pro);
+    font-size: 16pt;
+    font-weight: 200;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    span {
+      color: black;
+      font-weight: 600;
+    }
+  }
+  h4 {
+    color: var(--ngreen);
+    font-family: var(--font-bree-regular);
+    font-size: 24pt;
+    font-weight: 400;
+  }
+}
+
+.final {
+  height: 365px;
+  .bg-layer {
+    height: 350px;
+    background: url('../../../../assets/img/box.svg');
+    h3 {
+      color: var(--ngreen);
+      font-family: var(--font-source-pro);
+      font-size: 24pt;
+      font-weight: 700;
+    }
+
+    p {
+      font-family: var(--font-source-pro);
+      font-size: 20pt;
+      color: #666666;
+    }
+
+    a {
+      color: white;
+      font-family: var(--font-source-pro);
+      font-size: 16pt;
+      font-weight: 700;
+      border-radius: 25px;
+      min-width: 20%;
+    }
+  }
+  .condimento {
+    background: url('../../../../assets/img/madeForYou.png') left top/350px 350px no-repeat;
+    height: 350px;
+    width: 350px;
+    z-index: 40;
+    position: absolute;
+  }
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--mterra);
+}
+
+.btn:focus, .btn.focus {
+  box-shadow: none;
+}
+
+::ng-deep {
+  .color-stroke {
+    stroke: #6B9111 !important;
+  }
+  .color-fill {
+    fill: #6B9111 !important;
+  }
+}

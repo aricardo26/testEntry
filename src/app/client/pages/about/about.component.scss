@@ -1,0 +1,175 @@
+
+
+.phrase-about{
+  background-color: white;
+}
+#trama2{
+   background: url("../../../../assets/img/trama2.svg") no-repeat left 20px bottom 105px;
+ }
+#trama1{
+  background: url("../../../../assets/img/trama1.svg") repeat-y left 20px bottom 105px;
+}
+
+.text-about{
+  color: #999999;
+  font-size: 36px;
+  line-height: 47px;
+  padding-top: 82px;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-bottom: 30px;
+  position: absolute;
+  z-index: 20;
+}
+.mtreto{
+  margin-top: 1.5rem;
+}
+//.quote{
+//  background: url("~src/assets/img/quote.svg");
+//  width: 79px;
+//  height: 67px;
+//}
+
+.img-radius {
+  border-radius: 50%;
+}
+
+.numbers{
+  font-size: 50px;
+  font-family: var(--font-source-ligth);
+  color: #669900;
+}
+
+.number-text{
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+  margin-left: 25px;
+  color: #B3B3B3;
+}
+
+.history{
+  background: url('../../../../assets/img/olivo.svg')no-repeat right -40px top 0px;
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-color: white;
+}
+
+.heading{
+  font-size: 36px;
+  font-family: var(--font-source-bold);
+}
+.subheading{
+  font-size: 42px;
+  color: #B3B3B3;
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+
+.deck-dog{
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.btn-compra{
+  background-color: #6B9111 !important;
+  border-color: #6B9111 !important;
+  color: white;
+  font-family: var(--font-source-pro);
+  font-size: 16pt;
+  border-radius: 25px;
+  min-width: 20%;
+}
+.btn-compra-outline{
+  background-color: transparent !important;
+  border-color: #6B9111 !important;
+  color: #6B9111;
+  font-family: var(--font-source-pro);
+  font-size: 16pt;
+  border-width: medium;
+  border-radius: 25px;
+  min-width: 20%;
+}
+
+.personal{
+  //background: url('~src/assets/img/fondo-about.svg')no-repeat right 0px top 9px;
+  background-color: #F2F2F2;
+}
+
+.rabanos{
+  margin-bottom: 40px;
+  margin-top: 230px
+}
+
+
+.card{
+  background: transparent;
+  border: transparent;
+}
+
+.fondo-staff{
+  //background: url("~src/assets/img/staff/fondo-staff.png");
+}
+
+.card-footer{
+  background-color: white;
+  border-top: unset;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.redondo{
+  border-radius: 50%;
+  height: 110px !important;
+  width: 110px !important;
+}
+.desktop{
+  display: block;
+}
+.movil{
+  display: none;
+}
+
+.redondo_movil{
+  border-radius: 50%;
+  height: 110px;
+  width: 110px;
+}
+.card-img-top {
+  height: 320px;
+  width: 260px;
+}
+
+.fondo-pets{
+  background: url("../../../../assets/img/trama3.svg") repeat-y left -5px bottom 10px;
+  padding-bottom: 80px;
+  //height: 427px;
+}
+
+.semicolon1 {
+  position: relative;
+  right: 1018px;
+  bottom: -189px;
+  z-index: 10;
+  height: 80px;
+  width: 66px;
+  margin-top: -115px;
+  opacity: 0.5;
+}
+.semicolon2 {
+  position: relative;
+  right: 158px;
+  bottom: -265px;
+  z-index: 10;
+  height: 80px;
+  width: 66px;
+  margin-top: -115px;
+  opacity: 0.5;
+  transform: rotate(180deg);
+}
+
+.color-fill {
+  fill: #C9C9C9 !important;
+}

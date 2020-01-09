@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.16 62.16">
+  <title></title>
+  <defs>
+    <style>
+      .circle{
+      stroke-width:2px !important;
+      }
+    </style>
+  </defs>
+  <g id="Capa_2" data-name="Capa 2">
+    <g id="Layer_1" data-name="Layer 1">
+      <path d="M15.36,22.15H46.8a1,1,0,0,1,.86,1.52l-16,26.9a1,1,0,0,1-1.72,0L14.5,23.65A1,1,0,0,1,15.36,22.15Z"
+            style="fill:none;stroke:#6b9111;stroke-miterlimit:10;stroke-width:2px"/>
+      <path d="M46.8,40.42H15.36a1,1,0,0,1-.86-1.51l16-26.9a1,1,0,0,1,1.73,0l15.46,26.9A1,1,0,0,1,46.8,40.42Z"
+            style="fill:none;stroke:#6b9111;stroke-miterlimit:10;stroke-width:2px"/>
+      <circle id="svgCircle10" cx="31.08" cy="31.08" r="30.08" style="fill:none;stroke:#6b9111;stroke-miterlimit:10;stroke-width:0px"/>
+    </g>
+  </g>
+</svg>

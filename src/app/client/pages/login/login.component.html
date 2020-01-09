@@ -1,0 +1,73 @@
+<div class="row justify-content-center pt-30 pb-5">
+  <div class="form-1">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="row pt-5 pb-3">
+        <h3 class="text-center col-12">Hola!</h3>
+        <span class="text-center col-12 pb-1">Ingres&aacute; a tu cuenta</span>
+        <div class="row">
+          <div class="col-sm-6 col-12 pt-2">
+            <a href="#" class="btn col facebook">
+              <i class="fab fa-facebook"></i>
+              Ingres&aacute; con Facebook</a>
+          </div>
+          <div class="col-sm-6 col-12 pt-2">
+            <a href="#" class="btn col google">
+              <svg aria-hidden="true" class="svg-icon native iconGoogle" width="18" height="18" viewBox="0 0 18 18">
+                <path
+                  d="M16.51 8H8.98v3h4.3c-.18 1-.74 1.48-1.6 2.04v2.01h2.6a7.8 7.8 0 0 0 2.38-5.88c0-.57-.05-.66-.15-1.18z"
+                  fill="#4285F4"></path>
+                <path d="M8.98 17c2.16 0 3.97-.72 5.3-1.94l-2.6-2a4.8 4.8 0 0 1-7.18-2.54H1.83v2.07A8 8 0 0 0 8.98 17z"
+                      fill="#34A853"></path>
+                <path d="M4.5 10.52a4.8 4.8 0 0 1 0-3.04V5.41H1.83a8 8 0 0 0 0 7.18l2.67-2.07z" fill="#FBBC05"></path>
+                <path
+                  d="M8.98 4.18c1.17 0 2.23.4 3.06 1.2l2.3-2.3A8 8 0 0 0 1.83 5.4L4.5 7.49a4.77 4.77 0 0 1 4.48-3.3z"
+                  fill="#EA4335"></path>
+              </svg>
+              Ingres&aacute; con Google Plus</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <hr class="col-4">
+        <svg-icon src="../../../../assets/img/fresas.svg"
+                  [svgStyle]="{ 'width.px':35, 'height.px':35, 'fill':'#28a745' }"></svg-icon>
+        <hr class="col-4">
+      </div>
+      <div class="form-group">
+        <input type="email" formControlName="username" class="form-control" id="username"
+               placeholder="Usuario"
+               [ngClass]="{ 'is-invalid': submitted && f.username.errors }" required/>
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+          <div *ngIf="f.username.errors.required">Usuario es requerido</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="password" formControlName="password" class="form-control" id="password"
+               placeholder="Contraseña"
+               [ngClass]="{ 'is-invalid': submitted && f.password.errors }" required/>
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+          <div *ngIf="f.password.errors.required">Contraseña es requerido</div>
+        </div>
+      </div>
+      <div class="row text-center pb-1">
+        <div class="col-12 align-self-center">
+          <button [disabled]="loading" class="btn w-75">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Ingresar
+          </button>
+        </div>
+      </div>
+      <div class="row pb-1 justify-content-around">
+        <hr class="col-sm-3">
+        <h5 class="font-source-black text-dark">Sos nuevo aqu&iacute;!</h5>
+        <hr class="col-sm-3">
+      </div>
+      <div class="row text-center pb-5">
+        <div class="col-12 align-self-center">
+          <a class="btn btn-link w-75 font-source-semibold" routerLink="/register">cre&aacute; tu cuenta en Mundo
+            Naturali</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

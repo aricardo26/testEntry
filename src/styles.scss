@@ -1,0 +1,382 @@
+@import 'themes';
+@import '~@nebular/theme/styles/globals';
+
+@include nb-install() {
+  @include nb-theme-global();
+};
+/* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+@font-face {
+  font-family: "Bree Rg";
+  src: url('/assets/fonts/Bree Regular.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "MyriadPro-Regular";
+  src: url('/assets/fonts/MyriadPro-Regular_0.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "SourceSansPro_Bold";
+  src: url('/assets/fonts/SourceSansPro-Bold.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "SourceSansPro_Semibold";
+  src: url('/assets/fonts/SourceSansPro-Semibold.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "SourceSansPro-BoldIt";
+  src: url('/assets/fonts/SourceSansPro-BoldIt.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "SourceSansPro_Light";
+  src: url('/assets/fonts/SourceSansPro-Light.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "SourceSansPro_Regular";
+  src: url('/assets/fonts/SourceSansPro-Regular_0.otf') format("opentype");
+}
+@font-face {
+  font-family: "Leisha";
+  src: url('/assets/fonts/Leisha.otf') format("opentype");
+}
+
+:root {
+
+  --ngreen: rgb(102, 153, 0); //EQUIVALENTE A #669900
+  --ngreenClaro: rgb(107, 145, 17); //EQUIVALENTE A #6B9111
+  --green-notch: rgb(91, 118, 25); //EQUIVALENTE A #5B7619
+  --mgray: rgb(241, 239, 216); //EQUIVALENTE A #F1EFD8
+  --mterra: rgb(220, 213, 157); //EQUIVALENTE A #DCD59D
+  --morange: rgb(255, 102, 0); //EQUIVALENTE A #ff6600
+  --morangec: rgb(255, 153, 0); //EQUIVALENTE A #ff9900
+  --mazul: rgb(0, 102, 153); //EQUIVALENTE A #006699
+  --mfuschia: rgb(204, 0, 64); //EQUIVALENTE A #cc0040
+  --arena_fondo: rgb(251, 249, 243); //EQUIVALENTE A #fbf9f3
+  --arena_fondo_admin: rgb(255, 255, 204); //EQUIVALENTE A #ffffcc
+  --gris_footer: rgb(240, 240, 240); //EQUIVALENTE A ##f0f0f0
+  --title-body_text: rgb(40, 40, 40); //EQUIVALENTE A ##282828
+  --prodcuts-gray: rgb(151, 151, 151); //EQUIVALENTE A #979797
+  --help-gray: rgb(128, 128, 128); //EQUIVALENTE A #808080
+  --header-gray: rgb(179, 179, 179); //EQUIVALENTE A #B3B3B3
+  --header-search-gray: rgb(77, 77, 77); //EQUIVALENTE A #4D4D4D
+  --header-search2-gray: rgb(153, 153, 153); //EQUIVALENTE A #999999
+  --background-promotions: rgb(242, 242, 242); //EQUIVALENTE A #f2f2f2
+  --subtitle-gray: rgb(51, 51, 51); //EQUIVALENTE A #333333
+
+  //FORMULARIOS
+  --input-label-color: rgb(150, 150, 150); //EQUIVALE A #969696
+  --input-background: rgb(239, 239, 239); //EQUIVALE A #EFEFEF
+  --green-button: rgb(106, 144, 16); //EQUIVALE A #6A9010
+
+
+  --font-source-pro: "Source Sans Pro", serif;
+  --font-source-regular: "SourceSansPro_Regular", serif;
+  --font-source-bold: "SourceSansPro_Bold", serif;
+  --font-maria-pro: "MyriadPro-Regular", serif;
+  --font-source-semibold: "SourceSansPro_Semibold", serif;
+  --font-source-semibold-italic: "SourceSansPro_Semibold", serif;
+  --font-source-ligth: "SourceSansPro_Light", serif;
+  --font-source-black: "SourceSansPro_Black", serif;
+  --font-bree-regular: "Bree regular", serif;
+  --font-bree-serif: "Bree Serif", serif;
+  --font-leisha: "Leisha", serif;
+}
+
+body {
+  background-color: var(--background-promotions) !important;
+}
+
+.pt-50 {
+  padding-top: 8rem;
+}
+
+.pt-30 {
+  padding-top: 6rem;
+}
+
+.font-source-pro {
+  font-family: var(--font-source-pro);
+}
+
+.font-source-pro-light {
+  font-family: var(--font-source-ligth);
+}
+
+.font-source-black {
+  font-family: var(--font-source-bold);
+}
+
+.font-source-semibold {
+  font-family: var(--font-source-semibold);
+}
+
+.font-source-semibold-italic {
+  font-family: var(--font-source-semibold-italic);
+}
+
+.font-source-regular {
+  font-family: var(--font-source-regular);
+}
+
+.font-bree-regular {
+  font-family: var(--font-bree-regular);
+}
+
+.font-bree-serif {
+  font-family: var(--font-bree-serif);
+}
+
+.font-leisha {
+  font-family: var(--font-leisha);
+  letter-spacing: 1px;
+}
+
+.size-12 {
+  font-size: 12px;
+}
+
+.size-14 {
+  font-size: 14px;
+}
+
+.size-16 {
+  font-size: 16px;
+}
+
+.size-18 {
+  font-size: 18px;
+}
+
+.size-20 {
+  font-size: 20px;
+}
+
+.required {
+  &:after {
+    content: "*";
+    color: red;
+  }
+}
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 2px solid #42A948; /* green */
+}
+
+.ng-invalid.ng-dirty:not(form), .ng-invalid:not(form).form-submitted {
+  border-left: 2px solid #a94442; /* red */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100px 100px 100px 100px / 75px 75px 75px 75px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.px-7 {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.px-90 {
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+//MEDIA QUERYS A UTILIZAR
+//DENTRO DE CADA UNO PONGAN UN COMENTARIO DE QUE PAGINA ES PARA TENERLO MAS ORDENADO
+
+//MEDIA QUERY LAPTOP 1660x900
+@media  screen and (min-width: 1367px) and (max-width: 1600px){
+  //PAGINA ABOUT
+  .image-header{
+    background: url('../src/assets/img/about.jpg') no-repeat scroll 50% 21%;
+    height: 732px;
+    margin-top: 64px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+/* MEDIA QUERY LAPTOP 1366x768*/
+@media  screen and (max-width: 1366px) {
+  //PAGINA ABOUT
+  .image-header{
+    background: url('../src/assets/img/about.jpg') no-repeat scroll 50% 21%;
+    height: 626px;
+    margin-top: 64px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+}
+/* MEDIA QUERY LAPTOP 1920x1080*/
+@media  screen and (min-width: 1920px) {
+  //PAGINA ABOUT
+  .image-header{
+    background: url('../src/assets/img/about.jpg') no-repeat scroll 50% 21%;
+    height: 880px;
+    margin-top: 64px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+/* CELULARES (portrait & landscape) */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  // GENERAL PARA TODO EL SITIO
+  .px-90 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .d-xs-none {
+    display: none !important;
+  }
+  .d-sm-visible {
+    display: block !important;
+  }
+  //PAGINA ABOUT
+  .semicolon1{
+    position: relative !important;
+    right: 285px !important;
+    bottom: -166px !important;
+    z-index: 10 !important;
+    width: 60px !important;
+    height: 50px !important;
+    margin-top: -135px !important;
+    opacity: 0.5 !important;
+  }
+  .semicolon2{
+    position: relative !important;
+    right: 70px !important;
+    bottom: -319px !important;
+    z-index: 10 !important;
+    height: 80px !important;
+    width: 66px !important;
+    margin-top: -115px !important;
+    opacity: 0.5 !important;
+    transform: rotate(180deg) !important;
+  }
+  .text-about{
+    font-size: 24px !important;
+    line-height: 32px !important;
+    padding-left:20px !important;
+    padding-right:20px !important;
+    padding-top: 45px !important;
+  }
+  .rabanos{
+    margin-bottom: 0px !important;
+    margin-top: 300px !important;
+  }
+  .history {
+    background: url(../src/assets/img/olivo.svg) no-repeat right -130px top 0px !important;
+    background-repeat: no-repeat !important;
+    background-size: 220px !important;
+    background-color: white !important;
+  }
+  .subheading{
+    font-size: 36px !important;
+  }
+
+  .person{
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  .redondo_movil{
+    border-radius: 50%;
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  .desktop{
+    display: none !important;
+  }
+  .movil{
+    display: block !important;
+  }
+
+  .col-xs-5th-5{
+    width: 50% !important;
+  }
+  #trama1{
+    background-repeat: repeat-y !important;
+  }
+  .mtreto{
+    margin-top: 0rem !important;
+  }
+
+  // FOOTER
+  .strawberry{
+    position: relative;
+    right: -31px;
+    bottom: -105px !important;;
+  }
+  .ftitles{
+    font-size: 8pt !important;
+  }
+  .copyright{
+    font-size: 10pt !important;
+  }
+}
+
+/* IPAD Y TABLETS (portrait & landscape) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+}
+
+@media (max-width: 570px) {
+  .d-xs-none {
+    display: none;
+  }
+}
+
+.d-sm-visible{
+  display: none;
+}
+
+// DISENO DE REJILLA 5 COLUMNAS BOOTSTRAP EXTENSION
+
+@media (min-width: 992px) {
+  .col-md-1-5 { width: 20% !important; }
+  .col-md-2-5 { width: 40% !important; }
+  .col-md-3-5 { width: 60% !important; }
+  .col-md-4-5 { width: 80% !important; }
+  .col-md-5-5 { width: 100% !important; }
+}
+
+@media (min-width: 1200px) {
+  .col-lg-1-5 { width: 20% !important; }
+  .col-lg-2-5 { width: 40% !important; }
+  .col-lg-3-5 { width: 60% !important; }
+  .col-lg-4-5 { width: 80% !important; }
+  .col-lg-5-5 { width: 100% !important; }
+}

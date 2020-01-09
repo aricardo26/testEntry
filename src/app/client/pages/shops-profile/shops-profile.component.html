@@ -1,0 +1,866 @@
+<app-headers [help]="true" [shop]="true"></app-headers>
+
+<div class="header-shop">
+  <div class="overlay-gray"></div>
+  <!-- Start: description -->
+  <div class="container" style="margin-right: 0;">
+    <div class="row">
+      <div class="col-9 ml-5 title-shop">
+        <h1 class="text-uppercase shop-title">la casa de las verduras</h1>
+        <p><i class="fa fa-map-marker-alt fa-lg mr-2 shop-address"></i>Scalabrani Ortiza 235, CABA 1515</p>
+      </div>
+      <div class="col-2 title-shop">
+        <div class="row">
+          <div class="col-10 offset-2 local">
+            <p class="btn-nav shop_header " href="#">
+              <span class="shop_icon_header"></span>
+              <span class="shop-ubigeos">LOCAL</span><br>
+              <span class="shop-ubigeos">A LA CALLE</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- End: description -->
+</div>
+
+<div class="container-fluid bottom-divider">
+  <div class="row grid-divider-down align-items-center">
+    <div class="col-sm-2">
+      <img class="shop-logo" alt="title" src="../../../../assets/img/shops-logo.png">
+    </div>
+    <div class="col-sm-2">
+      <div class="row justify-content-left tienda ml-2 d-block">
+        <div class="row ml-1 align-items-center">
+          <span class="amount"><i class="fa fa-star fa-sm  star-green"></i></span>
+          <span class="amount"><i class="fa fa-star fa-sm  star-green"></i></span>
+          <span class="amount"><i class="fa fa-star fa-sm  star-green"></i></span>
+          <span class="amount"><i class="fa fa-star fa-sm star-green"></i></span>
+          <span class="amount"><i class="fa fa-star fa-sm star-grey"></i></span>
+          <span class="amount ml-3 star-grey">28</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-2">
+            <div class="row justify-content-left tienda ml-2 d-block">
+              <div class="row ml-1 align-items-center">
+                <div class="align-self-end ml-2"><p class="d-block no-margin number-products">800 productos</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row justify-content-left tienda ml-2 d-block">
+              <div class="row ml-1 align-items-center">
+                <span class="badge badge-pill badge-green">
+                  <i class="fas fa-bicycle fa-lg"></i>
+                </span>
+                <div class="align-self-end ml-2">
+                  <p class="d-block no-margin text-uppercase entrega">entrega local</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row justify-content-left tienda ml-2 d-block">
+              <div class="row ml-1 align-items-center">
+                <span class="badge badge-pill badge-orange"><i class="shop-icon-logo"></i></span>
+                <div class="align-self-end ml-2">
+                  <p class="d-block no-margin text-uppercase entrega">retiro en el domicilio</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row justify-content-left tienda ml-2 d-block">
+              <div class="row ml-1 align-items-center">
+                <div class="align-self-end ml-2">
+                  <a class="d-block no-margin text-uppercase show-more more-seller" (click)="tabset = !tabset"
+                     [attr.aria-expanded]="!tabset" aria-controls="collapseStore">mas info</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="collapseStore" [ngbCollapse]="!tabset" [@tabAnimation]="tabSetAction">
+  <ngb-tabset>
+    <ngb-tab>
+      <ng-template ngbTabTitle><span class="text-uppercase tabs-shosp">sobre la tienda</span></ng-template>
+      <!--<ngb-tab title="sobre la tienda">-->
+      <ng-template ngbTabContent>
+        <div class="container-fluid content-pills">
+          <div class="row">
+            <div class="col-12 pb-4 pl-0">
+
+              <div class="row justify-content-left tienda ml-2 d-block">
+                <div class="row ml-1 align-items-center">
+                  <span class="shop-hornet"></span>
+                  <div class="align-self-end ml-2 mb-1">
+                    <p class="d-block no-margin size-14 font-source-pro">Los envíos para las zonas que no aparecen en el mapa de cobertura, los coordinamos directamente con el comprador.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="row">
+                <div class="col-12">
+                  <p class="text-uppercase">
+                    <span class="font-source-pro head_label size-14">ubicación: </span>
+                    <span class="font-source-pro ubication_value size-14"> local a la calle</span><br>
+                    Scalabrani Ortiza 235, CABA 1515
+                  </p>
+                </div>
+                <div class="col-12 mb-3">
+                  <p class="font-source-pro head_label size-14 text-uppercase mb-0">horarios</p>
+                  <span class=""> lunes a sabado 8am-5pm</span><br>
+                  <span class=""> sabado a domingo 9am-3pm</span>
+                </div>
+                <div class="col-12 mb-3">
+                  <p class="font-source-pro head_label size-14 text-uppercase mb-0">cant. productos</p>
+                  <span class="font-bold"> 800 productos</span>
+                </div>
+                <div class="col-12 mb-3">
+                  <p class="font-source-pro text-uppercase head_label mb-0">especialidadd de las casas</p>
+                  <span class="font-bold"> Frutas, Carnes y Quesos</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="col-12 mb-3">
+                <p class="font-source-pro head_label size-14 text-uppercase mb-0">entregas y envios</p>
+                <span class="font-source-pro text-uppercase font-weight-bold ml-3"><i class="deliverd-logo"></i> retiro en el local</span>
+              </div>
+
+              <div class="col-12 mb-3">
+                <p class="font-source-pro head_label size-14 text-uppercase mb-0" style="color:var(--ngreen);"><i
+                  class="fas fa-bicycle fa-lg mr-2" style="color:var(--ngreen);"></i>entregas sin cargos</p>
+                <span class="font-source-pro">Orden minima de compra: </span><span
+                class="font-weight-bold">$150</span>
+              </div>
+              <div class="col-12 mb-3">
+                <p class="font-source-pro head_label size-14 text-uppercase mb-0"><i class="fas fa-bicycle fa-lg mr-2"
+                                                                   style="color:black;"></i>entregas con cargos
+                </p>
+                <span class="font-source-pro">Orden minima de compra: </span><span
+                class="font-weight-bold">$150</span>
+              </div>
+              <div class="col-12 mb-3">
+                <p class="font-source-pro head_label size-14 text-uppercase mb-0">
+                  entregas con cargos
+                </p>
+                <ul style="margin-left: -20px;">
+                  <li><span class="font-source-pro-light size-16">aledaños al comercio hasta 1km:</span><span class="size-16 font-source-semibold" style="color:var(--ngreen);">gratis</span>
+                  </li>
+                  <li><span class="font-source-pro-light size-16">hasta 8km: : </span><span class="size-16 font-source-semibold">$75</span>
+                  </li>
+                  <li><span class="font-source-pro-light size-16">hasta 30km: : </span><span class="size-16 font-source-semibold">$83</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 mb-3">
+                <p class="font-source-pro head_label size-14 text-uppercase mb-0">
+                  velocidad de envio
+                </p>
+                <ul style="margin-left: -20px;">
+                  <li><span class="font-source-pro-light size-16">dentro de las 24h: </span><span class="size-16 font-source-semibold">$7</span>
+                  </li>
+                  <li><span class="font-source-pro-light size-16">dentro de las 48h: </span><span class="size-16 font-source-semibold">$6</span>
+                  </li>
+                  <li><span class="font-source-pro-light size-16">dentro de las 72h: </span><span class="size-16 font-source-semibold">$5</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="col-6">
+              <img src="../../../../assets/img/maps.jpg" alt="title" width="510px" height="355px">
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid content-pills shop-descrip">
+          <div class="row">
+            <div class="col-sm-7 col-12 ">
+              <div class="row">
+                <div class="col-12 pl-0 pr-0">
+                  <p class="text-uppercase" style="color: #5C771A">nuestra historia</p>
+                </div>
+                <div class="col-12 font-source-pro pl-0 pr-0">
+                  <h5>Date el Gusto</h5>
+                  <p>
+                    Tina&Co, nace del placer que sentimos por la comida, los viajes, la bebida, las compras; la
+                    curiosidad por lo que nos ofrece el interior del país y el resto del mundo.
+                    Somos viajeros, sibaritas, buscadores y buenos anfitriones.</p>
+                  <p>Queremos compartir con quien se acerque a nuestro local, lo mejor en productos para la cocina, las
+                    mejores marcas en alimentos y en el cuidado del cuerpo.</p>
+
+                  <p>Si se cansan, pueden relajarse y mimarse un poco en nuestra confitería y si el clima es apropiado
+                    disfrutar de nuestra terraza, rodeados de plantas y algún bonsai. Elegir dentro de una gran variedad
+                    de tés, cafés y tortas caseras.</p>
+
+                  <p>Nuestra motivación es la excelencia. Y nuestro objetivo es brindar esa excelencia en un ambiente
+                    cálido y confortable.
+                  </p>
+                </div>
+                <div class="col-12">
+                  <div class="row">
+                    <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-5 col-12">
+              <div class="row">
+                <div class="col-sm-8 offset-sm-4">
+                  <img class="shop-logo-footer" alt="title" src="../../../../assets/img/shops-logo.png">
+                </div>
+                <div class="col-sm-12 text-center owner-name" style="top: 150px;">
+                  <h4>Nombre de la duena</h4>
+                  <p class="text-uppercase owner-staff">DUENA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab>
+      <ng-template ngbTabTitle><span class="text-uppercase tabs-shosp">reputacion</span></ng-template>
+      <ng-template ngbTabContent>
+        <div class="container-fluid content-pills">
+          <div class="row">
+            <div class="col-sm-4 border-right">
+              <div class="col-10 border-bottom">
+                <p class="">
+                  <span class="font-source-semibold text-uppercase size-16" style="color:var(--header-gray)">vendiendo desde: </span><br>
+                  <span class="font-source-regular size-16"> 11 meses en mundo naturali</span>
+                </p>
+              </div>
+              <div class="col-10 border-bottom" style="margin-top: 1em">
+                <p class="">
+                  <span class="font-source-semibold text-uppercase" style="color:var(--header-gray)">número de ventas desde inicio </span><br>
+                  <span class="font-source-pro ventas size-20"> 4500</span>
+                </p>
+              </div>
+              <div class="col-10 border-bottom" style="margin-top: 1em">
+                <p class="">
+                  <span class="font-source-semibold text-uppercase size-16"
+                        style="color:var(--header-gray)">reputación</span>
+                </p>
+                <span><img src="../../../../assets/img/ranking/rank-inicio.png"></span>
+                <span><img src="../../../../assets/img/ranking/rank-middle.png"></span>
+                <span><img src="../../../../assets/img/ranking/rank-middle.png"></span>
+                <span><img src="../../../../assets/img/ranking/rank-middle.png"></span>
+                <span><img class="rank-hojas" src="../../../../assets/img/ranking/rank-hojas.png"></span>
+                <span><img src="../../../../assets/img/ranking/rank-final1.png"></span>
+                <div class="row" style="margin-bottom: 1em">
+                  <div class="col-12">
+                    <p class="size-14 font-source-regular" style="margin-top: 1rem;font-weight: 500;">
+                      Nivel <span class="text-uppercase font-source-pro size-16"
+                                  style="color:var(--ngreen)">maximo</span>
+                    </p>
+                  </div>
+                  <div class="col-2">
+                    <span class="amount"><img src="../../../../assets/img/ranking/rank-star.png"></span>
+                  </div>
+                  <div class="col-9 pl-0">
+                    <p class="text-uppercase premiun font-source-black ">
+                      mundo premiun<br>
+                      <span
+                        class="font-source-pro text-lowercase italic-span font-italic">estás entre los mejores  !</span>
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-10" style="margin-top: 1em">
+                <div class="row" style="margin-bottom: 1em">
+                  <div class="col-2">
+                    <span class="span-img"><img src="../../../../assets/img/progress-ventas.png"></span>
+                  </div>
+                  <div class="col-8 pl-0">
+                    <span class="font-source-pro-light size-14 " style="color:var(--header-gray)">Ventas en los últimos 3 meses</span>
+                    <p>
+                      <ngb-progressbar type="success" [value]="25"></ngb-progressbar>
+                    </p>
+                  </div>
+                  <div class="col-2">
+                    <p class="font-source-regular size-16 value-span">4500</p>
+                  </div>
+                </div>
+                <div class="row" style="margin-bottom: 1em">
+                  <div class="col-2">
+                    <span class="span-img"><img src="../../../../assets/img/progress-clientes.png"></span>
+                  </div>
+                  <div class="col-8 pl-0">
+                    <span class="font-source-pro-light size-14 "
+                          style="color:var(--header-gray)">Atención al cliente</span>
+                    <p>
+                      <ngb-progressbar type="success" [value]="25"></ngb-progressbar>
+                    </p>
+                  </div>
+                  <div class="col-2">
+                    <p class="font-source-regular size-16 value-span">20</p>
+                  </div>
+                </div>
+                <div class="row" style="margin-bottom: 1em">
+                  <div class="col-2">
+                    <span class="span-img"><img src="../../../../assets/img/progress-envio.png"></span>
+                  </div>
+                  <div class="col-8 pl-0">
+                    <span class="font-source-pro-light size-14"
+                          style="color:var(--header-gray)">Velocidad en el envío</span>
+                    <p>
+                      <ngb-progressbar type="success" [value]="25"></ngb-progressbar>
+                    </p>
+                  </div>
+                  <div class="col-2">
+                    <p class="font-source-regular size-16 value-span">20</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="col-12">
+                <div class="col-12">
+                  <p class="mb-0">
+                  <span class="font-source-semibold text-uppercase size-16"
+                        style="color:var(--header-gray)">opiniones</span><br>
+                  </p>
+                </div>
+                <div class="row">
+                  <div class="col-2">
+                    <p class="font-source-regular mb-0 pl-3 val-reputacion">26</p>
+                  </div>
+                  <div class="col-3 px-0">
+                    <div class="col-12 my-3 pl-0">
+                      <ngb-progressbar type="info" [value]="25"></ngb-progressbar>
+                    </div>
+                    <div class="col-12 my-3 pl-0">
+                      <ngb-progressbar type="info" [value]="35"></ngb-progressbar>
+                    </div>
+                    <div class="col-12 my-3 pl-0">
+                      <ngb-progressbar type="info" [value]="45"></ngb-progressbar>
+                    </div>
+                  </div>
+                  <div class="col-2 pl-0">
+                    <div class="col-12 my-2 pl-0">
+                      <p class="text-uppercase size-12 font-source-pro mb-0" style="color: var(--header-gray)">buena (15)</p>
+                    </div>
+                    <div class="col-12 my-2 pl-0">
+                      <p class="text-uppercase size-12 font-source-pro mb-0" style="color: var(--header-gray)">regular (8)</p>
+                    </div>
+                    <div class="col-12 my-2 pl-0">
+                      <p class="text-uppercase size-12 font-source-pro mb-0" style="color: var(--header-gray)">mala (3)</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-12 comments">
+                <div class="col-12 pt-3">
+                  <p class="font-source-pro size-14" style="color:var(--morange)">26 opiniones • 3 respuestas</p>
+                </div>
+                <div class="row comment pt-3">
+                  <div class="col-12">
+                    <div class="row">
+                      <div class="col-12">
+                       <div class="row">
+                          <img src="../../../../assets/img/good-answer.png" alt="" class="pl-3">
+                          <div class="align-self-end  col-10 pl-2">
+                            <p class="d-block no-margin size-14 font-source-regular" style="color:#333333">Buena</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <p class="size-14 font-source-regular mb-1" style="color:#B0B0B0;">Josefina • Josefa91</p>
+                      </div>
+                      <div class="col-6 text-right">
+                        <p class="size-14 font-source-regular mb-1" style="color:#B0B0B0"> 24/05/2019 -12:20pm</p>
+                      </div>
+                      <div class="col-12">
+                        <p class="font-source-semibold size-16 mb-0">Todo perfecto</p>
+                        <p class="size-16 font-source-pro" style="color:#7f7f7f">
+                          Lo recomendaría al 100%. Un magnífico comercio. Muy amable el dueño, vino hasta con una tarjetita de agradecimiento por comprarle!. Adms,  un montón de productos
+                        </p>
+                      </div>
+                      <div class="col-10 offset-1">
+                        <div class="row">
+                          <div class="col-1">
+                            <img src="../../../../assets/img/shops-logo.png" alt="nombre_de_la tienda" width="50px" height="50px" >
+                          </div>
+                          <div class="col-11 pl-4">
+                            <p class="size-14 font-source-pro mb-0" style="color: var(--header-gray);">Tina &Co • 24/05/2019 - 12: 25pm</p>
+                            <p class="font-italic font-source-pro size-14 mb-0" style="color: var(--help-gray);">Muchas gracias Josefina. Su opinión es bien valorada, para ustds trabajamos.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row comment">
+                  <div class="col-12">
+                    <div class="row">
+                      <div class="col-12">
+                       <div class="row pt-3">
+                          <img src="../../../../assets/img/good-answer.png" alt="" class="pl-3">
+                          <div class="align-self-end  col-10 pl-2">
+                            <p class="d-block no-margin size-14 font-source-regular" style="color:#333333">Buena</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <p class="size-14 font-source-regular mb-1" style="color:#B0B0B0;">Luisa Maria • LUZMARY35</p>
+                      </div>
+                      <div class="col-6 text-right">
+                        <p class="size-14 font-source-regular mb-1" style="color:#B0B0B0"> 24/05/2019 -12:20pm</p>
+                      </div>
+                      <div class="col-12">
+                        <p class="size-12 font-source-pro mb-1" style="color:#B0B0B0;">1 respuesta del vendedor <span style="color:var(--morange)">ver respuesta </span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row comment">
+                  <div class="col-12">
+                    <div class="row">
+                      <div class="col-12">
+                       <div class="row pt-3">
+                          <img src="../../../../assets/img/good-answer.png" alt="" class="pl-3">
+                          <div class="align-self-end  col-10 pl-2">
+                            <p class="d-block no-margin size-14 font-source-regular" style="color:#333333">Buena</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <p class="size-14 font-source-regular mb-1" style="color:#B0B0B0;">Josefina • Josefa91</p>
+                      </div>
+                      <div class="col-6 text-right">
+                        <p class="size-14 font-source-regular mb-1" style="color:#B0B0B0"> 24/05/2019 -12:20pm</p>
+                      </div>
+                      <div class="col-12">
+                        <p class="font-source-semibold size-16 mb-0">Todo perfecto</p>
+                        <p class="size-16 font-source-pro" style="color:#7f7f7f">
+                          Lo recomendaría al 100%. Un magnífico comercio. Muy amable el dueño, vino hasta con una tarjetita de agradecimiento por comprarle!. Adms,  un montón de productos
+                        </p>
+                      </div>
+                      <div class="col-10 offset-1">
+                        <div class="row">
+                          <div class="col-1">
+                            <img src="../../../../assets/img/shops-logo.png" alt="nombre_de_la tienda" width="50px" height="50px" >
+                          </div>
+                          <div class="col-11 pl-4">
+                            <p class="size-14 font-source-pro mb-0" style="color: var(--header-gray);">Tina &Co • 24/05/2019 - 12: 25pm</p>
+                            <p class="font-italic font-source-pro size-14 mb-0" style="color: var(--help-gray);">Muchas gracias Josefina. Su opinión es bien valorada, para ustds trabajamos.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row comment" style="border-bottom: dotted 1px gray;">
+                  <div class="col-12">
+                    <div class="row">
+                      <div class="col-12">
+                       <div class="row pt-3">
+                          <img src="../../../../assets/img/good-answer.png" alt="" class="pl-3">
+                          <div class="align-self-end  col-10 pl-2">
+                            <p class="d-block no-margin size-14 font-source-regular" style="color:#333333">Buena</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <p class="size-14 font-source-regular mb-1" style="color:#B0B0B0;">Josefina • Josefa91</p>
+                      </div>
+                      <div class="col-6 text-right">
+                        <p class="size-14 font-source-regular mb-1" style="color:#B0B0B0"> 24/05/2019 -12:20pm</p>
+                      </div>
+                      <div class="col-12">
+                        <p class="font-source-semibold size-16 mb-0">Todo perfecto</p>
+                        <p class="size-16 font-source-pro" style="color:#7f7f7f">
+                          Lo recomendaría al 100%. Un magnífico comercio. Muy amable el dueño, vino hasta con una tarjetita de agradecimiento por comprarle!. Adms,  un montón de productos
+                        </p>
+                      </div>
+                      <div class="col-10 offset-1">
+                        <div class="row">
+                          <div class="col-1">
+                            <img src="../../../../assets/img/shops-logo.png" alt="nombre_de_la tienda" width="50px" height="50px" >
+                          </div>
+                          <div class="col-11 pl-4">
+                            <p class="size-14 font-source-pro mb-0" style="color: var(--header-gray);">Tina &Co • 24/05/2019 - 12: 25pm</p>
+                            <p class="font-italic font-source-pro size-14 mb-0" style="color: var(--help-gray);">Muchas gracias Josefina. Su opinión es bien valorada, para ustds trabajamos.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="pb-5 row" style="background-color: white; margin-bottom: -80px;">
+          </div>
+        </div>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab>
+      <ng-template ngbTabTitle><span class="text-uppercase tabs-shosp">empleos</span></ng-template>
+      <ng-template ngbTabContent>
+        <div class="container-fluid content-employes">
+          <div class="row">
+            <ngb-accordion style="width: 100%">
+              <ngb-panel id="static-1">
+                <ng-template ngbPanelTitle>
+                  <div class="row">
+                    <div class="col-12">
+                      <p class="size-20 font-source-semibold mb-1 text-left op-seller" style="color:#C4034B;"> Vendedor </p>
+                    </div>
+                  </div>
+                  <div class="row expand-jobs">
+                    <div class="col-8">
+                      <div class="row grid-divider-jobs">
+                        <div class="col-3 text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">localidad: </span><br>
+                            <span class="font-source-regular size-16 nolink"> Córdoba, Capital</span>
+                          </p>
+                        </div>
+                        <div class="col-3  text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">tipo de contrato: </span><br>
+                            <span class="font-source-regular size-16 nolink"> Tiempo Completo</span>
+                          </p>
+                        </div>
+                        <div class="col-4 text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">fecha de publicación </span><br>
+                            <span class="font-source-regular size-16 nolink"> 24/06/2019</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 align-self-center">
+                      <button class="btn" type="button">enviar solicitud</button>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  <div class="row jobs">
+                    <div class="col-8">
+                      <div class="row grid-divider-jobs">
+                        <div class="col-3 text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">localidad: </span><br>
+                            <span class="font-source-regular size-16 nolink"> Córdoba, Capital</span>
+                          </p>
+                        </div>
+                        <div class="col-3  text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">tipo de contrato: </span><br>
+                            <span class="font-source-regular size-16 nolink"> Tiempo Completo</span>
+                          </p>
+                        </div>
+                        <div class="col-4 text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">fecha de publicación </span><br>
+                            <span class="font-source-regular size-16 nolink"> 24/06/2019</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <p class="font-source-pro text-uppercase head_label size-14 mt-4 mb-0">
+                        descripción del puesto
+                      </p>
+                      <p class="size-14 font-source-pro mb-0">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+                        aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                        labore sustainable VHS.
+                      </p>
+                    </div>
+                    <div class="col-12">
+                      <p class="font-source-pro text-uppercase head_label size-14 mt-4 mb-0">
+                        requisitos
+                      </p>
+                      <span class="size-14 font-source-pro mb-0">- mayores de 18 anos</span><br>
+                      <span class="size-14 font-source-pro mb-0">- mayores de 18 anos</span><br>
+                      <span class="size-14 font-source-pro mb-0">- mayores de 18 anos</span><br>
+                      <span class="size-14 font-source-pro mb-0">- mayores de 18 anos</span>
+                    </div>
+                    <div class="col-12">
+                      <p class="font-source-pro text-uppercase head_label size-14 mt-4 mb-0">
+                        condición de contratación
+                      </p>
+                      <p class="size-14 font-source-pro mb-0">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+                        aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                        labore sustainable VHS.
+                      </p>
+                    </div>
+                    <div class="col-8 mt-3">
+                      <p class="text-uppercase">
+                        <span class="font-source-regular head_label size-6">cantidad de plazas: </span>
+                        <span class="font-source-regular ubication_value size-20"> 3</span>
+                      </p>
+                    </div>
+                    <div class="col-4 align-self-center mt-3">
+                      <button class="btn" type="button">enviar solicitud</button>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-panel>
+              <ngb-panel id="static-2">
+                <ng-template ngbPanelTitle>
+                  <div class="row">
+                    <div class="col-12">
+                      <p class="size-20 font-source-semibold mb-1 text-left op-seller" style="color:#C4034B;"> Vendedor </p>
+                    </div>
+                  </div>
+                  <div class="row expand-jobs">
+                    <div class="col-8">
+                      <div class="row grid-divider-jobs">
+                        <div class="col-3 text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">localidad: </span><br>
+                            <span class="font-source-regular size-16 nolink"> Córdoba, Capital</span>
+                          </p>
+                        </div>
+                        <div class="col-3  text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">tipo de contrato: </span><br>
+                            <span class="font-source-regular size-16 nolink"> Tiempo Completo</span>
+                          </p>
+                        </div>
+                        <div class="col-4 text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">fecha de publicación </span><br>
+                            <span class="font-source-regular size-16 nolink"> 24/06/2019</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 align-self-center">
+                      <button class="btn" type="button">enviar solicitud</button>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  <div class="row jobs">
+                    <div class="col-8">
+                      <div class="row grid-divider-jobs">
+                        <div class="col-3 text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">localidad: </span><br>
+                            <span class="font-source-regular size-16 nolink"> Córdoba, Capital</span>
+                          </p>
+                        </div>
+                        <div class="col-3  text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">tipo de contrato: </span><br>
+                            <span class="font-source-regular size-16 nolink"> Tiempo Completo</span>
+                          </p>
+                        </div>
+                        <div class="col-4 text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">fecha de publicación </span><br>
+                            <span class="font-source-regular size-16 nolink"> 24/06/2019</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <p class="font-source-pro text-uppercase head_label size-14 mt-4 mb-0">
+                        descripción del puesto
+                      </p>
+                      <p class="size-14 font-source-pro mb-0">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+                        aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                        labore sustainable VHS.
+                      </p>
+                    </div>
+                    <div class="col-12">
+                      <p class="font-source-pro text-uppercase head_label size-14 mt-4 mb-0">
+                        requisitos
+                      </p>
+                      <span class="size-14 font-source-pro mb-0">- mayores de 18 anos</span><br>
+                      <span class="size-14 font-source-pro mb-0">- mayores de 18 anos</span><br>
+                      <span class="size-14 font-source-pro mb-0">- mayores de 18 anos</span><br>
+                      <span class="size-14 font-source-pro mb-0">- mayores de 18 anos</span>
+                    </div>
+                    <div class="col-12">
+                      <p class="font-source-pro text-uppercase head_label size-14 mt-4 mb-0">
+                        condición de contratación
+                      </p>
+                      <p class="size-14 font-source-pro mb-0">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+                        aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                        labore sustainable VHS.
+                      </p>
+                    </div>
+                    <div class="col-8 mt-3">
+                      <p class="text-uppercase">
+                        <span class="font-source-regular head_label size-6">cantidad de plazas: </span>
+                        <span class="font-source-regular ubication_value size-20"> 3</span>
+                      </p>
+                    </div>
+                    <div class="col-4 align-self-center mt-3">
+                      <button class="btn" type="button">enviar solicitud</button>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-panel>
+              <ngb-panel id="static-3">
+                <ng-template ngbPanelTitle>
+                  <div class="row">
+                    <div class="col-12">
+                      <p class="size-20 font-source-semibold mb-1 text-left op-seller" style="color:#C4034B;"> Vendedor </p>
+                    </div>
+                  </div>
+                  <div class="row expand-jobs">
+                    <div class="col-8">
+                      <div class="row grid-divider-jobs">
+                        <div class="col-3 text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">localidad: </span><br>
+                            <span class="font-source-regular size-16 nolink"> Córdoba, Capital</span>
+                          </p>
+                        </div>
+                        <div class="col-3  text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">tipo de contrato: </span><br>
+                            <span class="font-source-regular size-16 nolink"> Tiempo Completo</span>
+                          </p>
+                        </div>
+                        <div class="col-4 text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">fecha de publicación </span><br>
+                            <span class="font-source-regular size-16 nolink"> 24/06/2019</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 align-self-center">
+                      <button class="btn" type="button">enviar solicitud</button>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  <div class="row jobs">
+                    <div class="col-8">
+                      <div class="row grid-divider-jobs">
+                        <div class="col-3 text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">localidad: </span><br>
+                            <span class="font-source-regular size-16 nolink"> Córdoba, Capital</span>
+                          </p>
+                        </div>
+                        <div class="col-3  text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">tipo de contrato: </span><br>
+                            <span class="font-source-regular size-16 nolink"> Tiempo Completo</span>
+                          </p>
+                        </div>
+                        <div class="col-4 text-left">
+                          <p class="">
+                            <span class="font-source-pro text-uppercase head_label size-14">fecha de publicación </span><br>
+                            <span class="font-source-regular size-16 nolink"> 24/06/2019</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <p class="font-source-pro text-uppercase head_label size-14 mt-4 mb-0">
+                        descripción del puesto
+                      </p>
+                      <p class="size-14 font-source-pro mb-0">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+                        aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                        labore sustainable VHS.
+                      </p>
+                    </div>
+                    <div class="col-12">
+                      <p class="font-source-pro text-uppercase head_label size-14 mt-4 mb-0">
+                        requisitos
+                      </p>
+                      <span class="size-14 font-source-pro mb-0">- mayores de 18 anos</span><br>
+                      <span class="size-14 font-source-pro mb-0">- mayores de 18 anos</span><br>
+                      <span class="size-14 font-source-pro mb-0">- mayores de 18 anos</span><br>
+                      <span class="size-14 font-source-pro mb-0">- mayores de 18 anos</span>
+                    </div>
+                    <div class="col-12">
+                      <p class="font-source-pro text-uppercase head_label size-14 mt-4 mb-0">
+                        condición de contratación
+                      </p>
+                      <p class="size-14 font-source-pro mb-0">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+                        aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                        labore sustainable VHS.
+                      </p>
+                    </div>
+                    <div class="col-8 mt-3">
+                      <p class="text-uppercase">
+                        <span class="font-source-regular head_label size-6">cantidad de plazas: </span>
+                        <span class="font-source-regular ubication_value size-20"> 3</span>
+                      </p>
+                    </div>
+                    <div class="col-4 align-self-center mt-3">
+                      <button class="btn" type="button">enviar solicitud</button>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-panel>
+
+            </ngb-accordion>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="pb-5 row" style="background-color: white; margin-bottom: -80px;">
+          </div>
+        </div>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>
+
+<div class="row ml-1 align-items-center pl-3 pt-2 pb-3">
+  <span class="shop-hornet"></span>
+  <div class="align-self-end ml-2 mb-1">
+    <p class="d-block no-margin size-14 font-source-regular">Despachos de <b>Lunes a Viernes antes de las 15hs.</b> Después de ese horario se envían el día hábil posterior.</p>
+  </div>
+</div>
+
+<!--<app-mega-filters></app-mega-filters>-->
+
+<app-footer></app-footer>

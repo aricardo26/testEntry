@@ -1,0 +1,19 @@
+<nb-layout>
+
+  <nb-layout-header fixed>
+
+    <app-admin-header class="admin-header"></app-admin-header>
+  </nb-layout-header>
+
+  <nb-sidebar>
+    <app-admin-sidebar></app-admin-sidebar>
+  </nb-sidebar>
+
+  <nb-layout-column class="colored-column-basic">
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+
+  <nb-layout-footer fixed>
+    <!-- Insert footer here -->
+  </nb-layout-footer>
+</nb-layout>

@@ -1,0 +1,124 @@
+
+.boxes{
+  .intro{
+    h3{
+      font-weight: 700;
+      font-size: 36pt;
+      font-family:  var(--font-source-pro);
+    };
+    p{
+      font-weight: 200;
+      font-size: 22pt;
+      font-family: var(--font-source-pro);
+      color:#B1B1B1;
+    };
+  };
+  &:before {
+    content: "";
+    background: url('../../../../assets/img/fresas.svg');
+    background-repeat: no-repeat;
+    background-position: 30px 0px;
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    right: 0;
+  };
+};
+.box{
+  border:solid 1px #F0F0F0;
+  height:295px;
+  width:auto;
+  padding:2rem 1rem;
+  &:before {
+    content: "";
+    background-image: url('../../../../assets/img/hojitas-01.svg');
+    background-repeat: no-repeat;
+    background-position: 30px 0px;
+    opacity: 0.4;
+    height: 70px;
+    width: 200px;
+    position: absolute;
+    left: 15%;
+    top: 15%;
+  };
+  .logo{
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 80px;
+    z-index: 5144;
+    position: relative;
+    left: 35%;
+    top: 10%;
+    padding-bottom: 8rem;
+  };
+  .card-1{
+    background-image: url('../../../../assets/img/cards/card-1.svg');
+  };
+  .card-2{
+    background-image: url('../../../../assets/img/cards/card-2.svg');
+  };
+  .card-3{
+    background-image: url('../../../../assets/img/cards/card-3.svg');
+    width: 90px !important;
+  };
+  .card-4{
+    background-image: url('../../../../assets/img/cards/card-4.svg');
+    width: 90px !important;
+  };
+  .card-5{
+    background-image: url('../../../../assets/img/cards/card-5.svg');
+    width: 90px !important;
+  };
+  .card-6{
+    background-image: url('../../../../assets/img/cards/card-6.svg');
+    width: 100px !important;
+  };
+  .card-7{
+    background-image: url('../../../../assets/img/cards/card-7.svg');
+  };
+  .card-8{
+    background-image: url('../../../../assets/img/cards/card-8.svg');
+    width: 110px !important;
+  };
+  .card-9{
+    background-image: url('../../../../assets/img/cards/card-9.svg');
+    width: 90px !important;
+  };
+  .card-10{
+    background-image: url('../../../../assets/img/cards/card-10.svg');
+    width: 90px !important;
+  };
+  .card-11{
+    background-image: url('../../../../assets/img/cards/card-11.svg');
+    width: 90px !important;
+  };
+  .card-12{
+    background-image: url('../../../../assets/img/cards/card-12.svg');
+    width: 90px !important;
+  };
+  h5{
+    font-weight: 800;
+    font-size: 16.32pt;
+    font-family: var(--font-source-pro);
+  };
+  p{
+    font-weight: 200;
+    font-size: 16.32pt;
+    font-family: var(--font-source-pro);
+  };
+  .green{
+    font-weight: 800;
+    font-size: 18pt;
+    font-family: var(--font-source-pro);
+    color: var(--ngreen);
+  };
+};
+
+.color-stroke {
+  stroke: black;
+}
+.color-fill {
+  fill: black;
+}
+
+

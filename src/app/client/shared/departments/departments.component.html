@@ -1,0 +1,88 @@
+<ng-template [ngIf]="subcategory === true">
+<div fxLayout="row wrap" class="px-90 pb-5">
+  <div fxFlex="17%" *ngIf="subcategory" class="m-2 p-0 box_deparments" fxLayoutAlign="center center" style="width: 177px;height: auto;">
+    <div class="card hovercard">
+
+      <div class="info">
+        <div class="title">
+          <a href="#" class="card_name">Popular en tu zona</a>
+        </div>
+      </div>
+      <div class="cardheader">
+        <img src="../../../../assets/img/departments/10293469-bolsa-de-papel-con-verduras-y-alimentos-aislados-en-blanco.jpg" alt="" class="img-thumb fijos">
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-around end"  class="pt-3 pb-4" >
+        <div fxFlex="100%" class="text-center">
+          <a class="font-source-pro size-14" href="" style="color: var(--morangec);">ver todos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="17%" *ngIf="subcategory" class="m-2 p-0 box_deparments" fxLayoutAlign="center center" style="width: 177px;height: auto;">
+    <div class="card hovercard">
+
+      <div class="info">
+        <div class="title">
+          <a href="#" class="card_name">Ofertón!!!</a>
+        </div>
+      </div>
+      <div class="cardheader">
+        <img src="../../../../assets/img/departments/72271276-hombre-empujando-compras-carrito-excitado-mujer-tienda-de-comestibles-bolsa-blanco.jpg" alt="" class="img-thumb fijos">
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-around end"  class="pt-3 pb-4" >
+        <div fxFlex="100%" class="text-center">
+          <a class="font-source-pro size-14" href="" style="color: var(--morangec);">ver todos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div fxFlex="17%" *ngFor="let deparment of deparments" class="m-2 p-0 box_deparments" fxLayoutAlign="center center" style="width: 177px;height: auto;">
+    <div class="card hovercard">
+      <div class="overlay" style="background: linear-gradient(    180deg,     rgba(255, 255, 255,0) 35%  ,     rgba(255, 255, 255,1) 75%  );  height: 125px;"></div>
+      <div class="cardheader">
+        <img src="../../../assets/img/departments/{{deparment.img}}" alt="" class="img-thumb">
+      </div>
+      <div class="info" id="hoverWhite">
+        <div class="title">
+          <a href="#" class="card_name">{{deparment.name}}</a>
+        </div>
+      </div>
+      <div class="container" *ngIf="subcategory" >
+        <div class="text-center row" *ngFor="let sub of deparment.subcategory">
+          <span class="col-12 font-source-pro size-14" href="" style="color: var(--header-gray);">{{sub.name}}</span>
+        </div>
+
+      </div>
+      <div fxLayout="row" *ngIf="subcategory" fxLayoutAlign="space-around end"  class="pt-3 pb-4" >
+        <div fxFlex="100%" class="text-center">
+          <a class="font-source-pro size-14" href="" style="color: var(--morangec);">ver todos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</ng-template>
+<ng-template [ngIf]="subcategory === false">
+  <div fxLayout="row wrap" class="px-90 pb-5" style="margin-top: 35px;">
+
+    <div fxFlex="17%" *ngFor="let deparment of deparments" class="m-2 p-0 box_deparments" fxLayoutAlign="center center" style="width: 177px;height: auto;">
+      <div class="card hovercard">
+        <div class="cardheader">
+          <img src="../../../assets/img/departments/{{deparment.img}}" alt="" class="img-thumb">
+        </div>
+        <div class="info" id="single_name">
+          <div class="title">
+            <a routerLink="porHacer" class="card_name">{{deparment.name}}</a>
+          </div>
+        </div>
+        <div fxLayout="row" *ngIf="subcategory" fxLayoutAlign="space-around end"  class="pt-3 pb-4" >
+          <div fxFlex="100%" class="text-center">
+            <a class="font-source-pro size-14" href="" style="color: var(--morangec);">ver todos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

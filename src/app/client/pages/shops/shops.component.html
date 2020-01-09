@@ -1,0 +1,78 @@
+<div>
+  <app-headers [ngStyle]="{'width': '100%'}" [help]="true" [shops]="true" [login]="true" [cart]="true" [seller]="true"
+               [shop]="true" [loguin]="true" [zipcode]="false" [search]="true"
+               placeholderSearchText="búsqueda totalmente saludable"></app-headers>
+  <section class='shops'>
+    <div class='container-fluid'>
+      <div class='row'>
+        <div class='col-sm-6'>
+          <h4 class='text-uppercase pb-3 font-bree-regular' style='font-size: 24pt'>nuestros vendedores</h4>
+          <button class="btn btn-outline-dark px-4" type="button" style='border-radius: 50px;'>emprendedores</button>
+          <button class="btn btn-outline-light px-4 ml-3" type="button" style='border-radius: 50px;'>comercios</button>
+        </div>
+        <div class='col-sm-6 toppadding text-right'>
+          <a href='' class='px-4 textFilter font-source-pro' style='font-size: 12pt'>Retiro en el local</a>
+          <a href='' class='p-1 textFilter roundgreen font-source-pro' style='font-size: 12pt'>con Envios</a>
+          <a class='textFilter font-source-pro ml-3' style='font-size: 12pt'>Mostrar por: </a>
+          <a class="dropdown-toggle ml-3" id="dropdownMenuLink" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            Envios gratis
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-sm-3 pt-4'>
+          <div class="card hovercard">
+            <div class="cardheader"
+                 style="background: url('../../../../assets/img/baby-mashed-spoon-glass-jar-450w-522407656.jpg')">
+            </div>
+            <div class="avatar">
+              <img alt="" src="../../../../assets/img/images-2.jpg">
+            </div>
+            <div class="info">
+              <div class="title">
+                <span class="amount"><i class="fa fa-star fa-sm star-green"></i></span>
+                <span class="amount"><i class="fa fa-star fa-sm star-green"></i></span>
+                <span class="amount"><i class="fa fa-star fa-sm star-green"></i></span>
+                <span class="amount"><i class="fa fa-star fa-sm star-green"></i></span>
+                <span class="amount"><i class="fa fa-star fa-sm star-grey"></i></span>
+                <a href="#" class="card_name text-uppercase"> 36</a><br>
+                <a href="#" class="card_name text-uppercase name_black"> La casa de las verduras</a>
+              </div>
+            </div>
+            <div class="bottom">
+              <div fxLayout="row" class="text-center">
+                <div fxFlex="100%">
+                  <p class="copyright">
+                    <a class="titles ftitles" routerLink="../policies">Frutas y Verduras </a>
+                    <i class="fa fa-circle fs-10 align-middle mr-1"></i>
+                    <a class="titles ftitles" routerLink="../policies">Carnes y Aves </a>
+                    <i class="fa fa-circle fs-10 align-middle mr-1"></i>
+                    <a class="titles ftitles" routerLink="../policies">Pescados y Mariscos</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div fxLayout="row" class="pt-3 pb-4">
+              <div fxFlex="100%" class="text-center">
+                <button class="btn btn-outline-light px-4 ml-3 allcomerce" type="button">ver los 800 productos</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='col-sm-9 pt-4'>
+          <app-carousel [type]="'most_seller'" [location]="true" count=6></app-carousel>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <app-footer [phrase]="true" [strawberry]="false"></app-footer>
+</div>
+
+

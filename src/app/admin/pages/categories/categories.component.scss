@@ -1,0 +1,61 @@
+.renameClass{
+
+}
+.tree-info {
+  flex: 1 0 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.tree-controlls {
+  display: flex;
+  flex-direction: column;
+}
+.tree-content {
+  display: flex;
+  flex-direction: column;
+}
+.tree-container {
+  margin-bottom: 20px;
+}
+.tree-container--with-controls {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tree-demo-app {
+  display: flex;
+  flex-direction: column;
+  margin-bottom:50px;
+}
+.tree-title {
+  font-family: var(--font-bree-regular);
+  color: var(--ngreen) !important;
+  font-size: 1.7em;
+  margin-bottom: 20px;
+}
+.notice {
+  color: #e91e63;
+  font-size: 1.2em;
+  font-style: italic;
+}
+.button {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 #888;
+  background-color: #fff;
+  -webkit-appearance: none;
+  border: 1px solid #000;
+  height: 35px;
+  outline: none;
+}
+.button-pressed {
+  box-shadow: 0 0 1px 0 #888;
+}
+.tree-controlls button {
+  margin: 5px;
+}
+.footer-editor-tap{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

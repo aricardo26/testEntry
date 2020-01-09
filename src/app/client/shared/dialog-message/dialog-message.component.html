@@ -1,0 +1,77 @@
+<!--
+<div class="mat-dialog-message" *ngIf="data.opcion === 1">
+  <span mat-dialog-title class="dialog-modal-title text-center">Ya tenés tu cuenta !!!</span>
+
+  <mat-dialog-content>
+    <div fxFlex="100" fxLayout="row wrap">
+      <div class="message" fxFlex="100" class="dialog-content" fxLayout="row" fxLayoutAlign="start center">
+        Comenzá a comprar tus productos y disfrutar de los beneficios que te ofrecemos.
+      </div>
+      <div fxFlex="100" fxLayout="row"><br /></div>
+    </div>
+    <div class="row text-center">
+      <div class="text-user col-6 text-right">Tu usuario es: </div>
+      <div class="username col-6 text-left">{{ data.message }}</div>
+      <div fxFlex="100" fxLayout="row"><br /></div>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="center">
+    <div fxFlex="100" fxLayout="row wrap">
+      <div fxFlex="100" class="dialog-content" fxLayout="row" fxLayoutAlign="center center">
+        <button type="button" mat-raised-button color="primary" (click)="dialogRef.close(false)" *ngIf="data.showcancel">
+          Cancelar
+        </button>
+        <button type="button" mat-raised-button color="primary" (click)="dialogRef.close(true)">ingresar</button>
+      </div>
+    </div>
+  </mat-dialog-actions>
+</div>
+
+<div class="mat-dialog-tienda" *ngIf="data.opcion === 2">
+  <div>
+    <img class="banner_tienda_superior" src="../../../assets/img/banner_tienda_superior.jpg" alt="banner_tienda">
+  </div>
+  <span mat-dialog-title class="dialog-modal-title text-center text-tienda">¡Creaste tu cuenta de comercio!</span>
+
+  <mat-dialog-content class="dialog-tienda">
+    <div class="row text-center">
+      <div class="text-user col-6 text-right">Tu usuario es: </div>
+      <div class="username col-6 text-left">{{ data.message }}</div>
+      <div fxFlex="100" fxLayout="row"><br /></div>
+      <div class="text-user col-12">Ya tenés tu tienda para empezar a vender.</div>
+      <div class="text-user col-12 text-gray">Agregá tus productos y gestioná tus pedidos</div>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="center">
+    <div fxFlex="100" fxLayout="row wrap">
+      <div fxFlex="100" class="dialog-content" fxLayout="row" fxLayoutAlign="center center">
+        <button type="button" mat-raised-button color="primary" (click)="dialogRef.close(true)">
+          empezar a vender
+        </button>
+        <button type="button" mat-raised-button color="secundary" (click)="dialogRef.close(false)" >
+          completar mis datos fiscales ahora
+        </button>
+      </div>
+    </div>
+  </mat-dialog-actions>
+</div>
+-->
+<!--
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>One fine body&hellip;</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+-->

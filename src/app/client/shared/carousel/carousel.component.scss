@@ -1,0 +1,120 @@
+#promotions_cards{
+  height: 100%;
+  background-color: var(--background-promotions);
+  padding-top: 35px;
+  padding-bottom: 45px;
+}
+
+.promtions-carousel{
+  width: 100%;
+  padding-left: 68px;
+  padding-right: 68px;
+}
+
+
+.icon-card {
+  //background: #ffffff;
+  padding: 1px;
+  border-radius: 50%;
+  //margin-right: 25px;
+}
+
+.icon {
+  height: 45px;
+  width: 45px;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.card-title{
+  font-family: var(--font-source-bold);
+  font-weight: bold;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+.card-subtitle{
+  font-family: var(--font-source-regular);
+  font-weight: normal;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+.card-text{
+  font-family: var(--font-source-regular);
+  font-weight: normal;
+  font-size: 14px;
+  color: #FFFFFF;
+  text-decoration: underline;
+  padding-top: 10px;
+}
+.overlay-card {
+  width: 100%;
+  height: 110px;
+  left: 0;
+  background-image: url('../../../../assets/img/promotions/overlay_card.png');
+  z-index: 0;
+}
+
+
+.seller_width{
+  width: 100%;
+}
+
+#most_seller{
+  padding-bottom: 40px;
+}
+.card-products-saler {
+  border: 0;
+}
+
+.card-products-saler h5 {
+  font-family: var(--font-source-bold);
+  font-weight: bold;
+  color: #000000;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.card-products-saler p {
+  font-family: var(--font-source-pro);
+  font-size: 16px;
+  color: #4D4D4D;
+  margin-bottom: 0;
+  line-height: 20px;
+}
+
+.card-products-saler label {
+  font-family: var(--font-source-pro);
+  font-size: 15px;
+  color: #B1B1B1;
+}
+
+.card-products-saler button {
+  font-family: var(--font-source-ligth);
+  color: #6A9010;
+  background: transparent;
+  border: #6A9010 solid 1px;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 0 4px;
+}
+
+.card-products-saler button:hover,
+.card-products-saler button:active{
+  color: white;
+  background: #6A9010;
+  border: #6A9010 solid 1px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.location{
+  color: #6B9111;
+  font: var(--font-source-pro);
+  font-size: 12px;
+}

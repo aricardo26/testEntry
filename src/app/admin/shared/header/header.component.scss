@@ -1,0 +1,15 @@
+.navbar-brand {
+  font-family: var(--font-bree-regular);
+  color: var(--ngreen) !important;
+  font-size: 22.94px;
+
+  span {
+    margin-left: 10px;
+  }
+}
+.profile-container{
+  width: 100%;
+}
+.user-profile{
+  justify-content: flex-end;
+}

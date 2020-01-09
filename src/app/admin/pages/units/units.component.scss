@@ -1,0 +1,55 @@
+.card-title {
+  font-family: var(--font-bree-regular);
+  color: var(--ngreen) !important;
+  font-size: 1.7em;
+  margin-bottom: 20px;
+}
+::ng-deep .nb-theme-corporate ng2-smart-table th.ng2-smart-actions-title-add a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .875rem !important;
+  padding: 0.375rem 0.5rem;
+  background-color: transparent;
+  font-weight: bold;
+  border: 0;
+  color: #1e6bb8;
+  text-decoration: none;
+}
+
+::ng-deep .nb-theme-corporate ng2-smart-table th.ng2-smart-actions-title-add a:hover {
+  text-decoration: underline;
+  background-color: transparent;
+  border: 0;
+}
+
+::ng-deep .nb-theme-corporate ng2-smart-table .ng2-smart-actions a.ng2-smart-action {
+  font-size: .700rem !important;
+  background-color: transparent;
+  font-weight: bold;
+  border: 0;
+  color: #1e6bb8;
+  text-decoration: none;
+}
+
+::ng-deep checkbox-editor > input[type=checkbox] {
+  height: 15px !important;
+}
+
+::ng-deep checkbox-editor > input[type=checkbox]:focus {
+  box-shadow: none;
+}
+
+::ng-deep checkbox-filter > input[type=checkbox] {
+  height: 15px !important;
+}
+
+::ng-deep checkbox-filter > input[type=checkbox]:focus {
+  box-shadow: none;
+}
+
+::ng-deep checkbox-filter > a{
+  color: #1e6bb8;
+  text-decoration: none;
+}
+

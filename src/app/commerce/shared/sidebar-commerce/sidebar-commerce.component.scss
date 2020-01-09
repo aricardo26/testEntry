@@ -1,0 +1,22 @@
+::ng-deep{
+  .nb-theme-corporate nb-menu .menu-item {
+    border-bottom: unset;
+  }
+  .nb-theme-corporate nb-sidebar {
+    background-color: #DDD69E;
+  }
+  .nb-theme-corporate nb-menu .menu-item .menu-icon,
+  .nb-theme-corporate nb-menu .menu-item .menu-icon,
+  .nb-theme-corporate nb-menu .menu-item .expand-state,
+  .nb-theme-corporate nb-menu .menu-item a:hover,
+  .nb-theme-corporate nb-menu .menu-item .menu-icon:hover,
+  .nb-theme-corporate nb-menu .menu-item .expand-state:hover{
+    color: #506D0D !important;
+  }
+  .menu-item a .menu-title{
+    color: #506D0D;
+  }
+  .nb-theme-corporate nb-menu .menu-item .menu-item:first-child {
+    border-top: unset;
+  }
+}

@@ -1,0 +1,64 @@
+<nb-layout>
+  <nb-layout-column class="colored-column-warning p-0 pr-3">
+    <nb-card accent="warning">
+      <nb-card-body>
+        <div class="tree-container" >
+          <div class="tree-info row">
+            <div class="col-10"><p class="tree-title">Categorias</p></div>
+            <div class="col-2"><button *ngIf="categorySelected" type="button" class="btn btn-outline-secondary btn-sm fa fa-eraser" (click)="resetTreeSelect()"></button></div>
+
+
+          </div>
+          <div class="tree-content" *ngIf="categoriesloading">
+            <tree #categoriesTree1
+                  [tree]="categoriesTree"
+                  [settings]="settings"
+                  (menuItemSelected)="onMenuItemSelected($event)"
+                  (nodeRemoved)="onNodeRemoved($event)"
+                  (nodeRenamed)="onNodeRenamed($event)"
+                  (nodeSelected)="onNodeSelected($event)"
+                  (nodeMoved)="onNodeMoved($event)"
+                  (nodeCreated)="onNodeCreated($event)"
+                  (nodeExpanded)="onNodeExpanded($event)"
+                  (nodeCollapsed)="onNodeCollapsed($event)">
+            </tree>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </nb-layout-column>
+  <nb-layout-column class="colored-column-info p-0">
+    <nb-card accent="warning">
+      <nb-card-body>
+        <form [formGroup]="categoryForm" >
+          <div class="tree-info">
+            <p class="tree-title">{{titleEditorCard}} Categoría</p>
+          </div>
+          <input type="text" formControlName="name" nbInput fullWidth placeholder="Nombre" class="mb-4">
+          <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+            <div *ngIf="f.name.errors.required">El nombre es requerido</div>
+          </div>
+
+          <nb-select multiple fullWidth  placeholder="Seleccione Filtros" class="mb-4" [(selected)]="filtersSelected">
+            <nb-option [value]="">Limpiar selección</nb-option>
+            <nb-option *ngFor="let filter of filters" [value]="filter.id">{{filter.name}}</nb-option>
+          </nb-select>
+
+          <!--<nb-select fullWidth formControlName="category" placeholder="Seleccione Categoria" class="mb-4" [(selected)]="categorySelected">-->
+            <!--<nb-option [value]="">Limpiar selección</nb-option>-->
+            <!--<nb-option-group *ngFor="let category of categories" [title]="category.name">-->
+              <!--<nb-option [value]="category.id">{{category.name}} (PADRE)</nb-option>-->
+              <!--<nb-option *ngFor="let subcategories of category.categories"-->
+                         <!--[value]="subcategories.id">{{subcategories.name}}</nb-option>-->
+            <!--</nb-option-group>-->
+          <!--</nb-select>-->
+        </form>
+      </nb-card-body>
+      <nb-card-footer class="footer-editor-tap">
+        <button type="button" class="btn btn-outline-secondary" (click)="reset()">Cancelar</button>
+        <button *ngIf="!edit" type="button" class="btn btn-success ml-2" (click)="saveFromPanel()">{{titleEditorCard}}</button>
+        <button *ngIf="edit" type="button" class="btn btn-primary ml-2" (click)="editFromPanel()">{{titleEditorCard}}</button>
+      </nb-card-footer>
+    </nb-card>
+  </nb-layout-column>
+</nb-layout>

@@ -1,0 +1,111 @@
+::ng-deep{
+  nb-layout-column.colored-column-basic {
+    background-color: white;
+  }
+}
+
+.p_pedidos{
+  font-size: 24px;
+  font-family: var(--font-source-bold) !important;
+}
+.span_pedidos{
+  color:#EE6C01;
+  font-family: var(--font-source-pro) !important;
+}
+.span_badge{
+  background-color: #EE6C01;
+  border-radius: 5px;
+  color: white;
+  padding: 3px 15px;
+}
+
+.btn-searsh{
+  background-color: #EE6C01;
+  color:white;
+  padding: 5px 20px;
+}
+
+// TABS
+.container-tabs{
+  width: 100%;
+  padding: 50px 0 50px 40px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.rowtabs{
+  background-color: #E6E6E6;
+}
+
+.tabs li{
+  width: calc( 32% - 4px );
+  height: 44px;
+  margin-right: 4px;
+  margin-bottom: -2px;
+  padding-top: 10px;
+  padding-left: 10px;
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  font-family: var(--font-source-ligth);
+  font-size: 18px;
+  color: var(--color-g);
+  background-color: transparent;
+  border-radius: 6px 6px 0 0;
+  border: 2px solid transparent;
+  border-bottom: none;
+  transition: all 100ms ease-in-out;
+  user-select: none;
+  cursor: pointer;
+  text-align: center;
+}
+.tabs li.active {
+  color: #333333;
+  background-color: white;
+  z-index: 4;
+  cursor: default;
+  font-family: var(--font-source-bold);
+}
+
+//CUSTOM RADIO
+.radio-item {
+  display: inline-block;
+  position: relative;
+  padding: 0 6px;
+}
+
+.radio-item input[type='radio'] {
+  display: none;
+}
+
+.radio-item label {
+  color: #969696;
+  font-weight: normal;
+  font-size: 14px;
+  font-family: var(--font-source-pro);
+}
+
+.radio-item label:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  /* top: 5px; */
+  margin: 0 5px 0 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 11px;
+  border: 2px solid #EE6C01;
+  background-color: transparent;
+}
+
+.radio-item input[type=radio]:checked + label:after {
+  border-radius: 11px;
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  content: " ";
+  display: block;
+  background: #EE6C01;
+}

@@ -1,0 +1,140 @@
+<!--NAVBAR-->
+<app-headers [help]="true"></app-headers>
+
+<ng-template [ngIf]="user" [ngIfElse]="comercial">
+  <div class="d-flex justify-content-center pt-30 pb-5">
+    <div class="form-1 col-sm-8 col-md-6 col-lg-4">
+      <form class="mx-2" [formGroup]="normal" (ngSubmit)="onSubmit()">
+        <div class="row pt-5 pb-3">
+          <h3 class="text-left col-sm-6">Creá tu cuenta!</h3>
+          <a class="align-self-center col text-right" (click)="onChangeView()">Crear una cuenta de comercio</a>
+        </div>
+        <div class="form-group">
+          <label class="required" for="name">Nombre y Apellidos</label>
+          <input type="text" class="form-control" formControlName="name" id="name"
+                 [ngClass]="{ 'is-invalid': submitted && fn.name.errors }" required/>
+          <div *ngIf="submitted && fn.name.errors" class="invalid-feedback">
+            <div *ngIf="fn.name.errors.required">Nombre  es requerido</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="required" for="email">Email</label>
+          <input type="email" class="form-control" formControlName="email" id="email"
+                 [ngClass]="{ 'is-invalid': submitted && fn.email.errors }" required/>
+          <div *ngIf="submitted && fn.email.errors" class="invalid-feedback">
+            <div *ngIf="fn.email.errors.required">Correo  es requerido</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="required" for="password">Contraseña</label>
+          <input type="password" class="form-control"formControlName="password" required minlength="6"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="password"
+                 [ngClass]="{ 'is-invalid': submitted && fn.password.errors }" required/>
+          <div *ngIf="submitted && fn.password.errors" class="invalid-feedback">
+            <div *ngIf="fn.password.errors.required">Contraseña  es requerido</div>
+            <div *ngIf="fn.password.errors.minlength">Contraseña  es muy corta</div>
+            <div *ngIf="fn.password.errors.pattern"> Contraseña no cumple con los parametros de seguridad</div>
+          </div>
+          <p>La contraseña debe contener al menos <span class="text-danger">6 caracteres</span></p>
+        </div>
+        <div class="form-group">
+          <label class="required" for="confirm">Confirmar la Contraseña</label>
+          <input type="password" class="form-control" formControlName="confirm" required minlength="6"
+                 pattern="{{fn.password.value }}" id="confirm"
+                 [ngClass]="{ 'is-invalid': submitted && fn.confirm.errors }" required/>
+          <div *ngIf="submitted && fn.confirm.errors" class="invalid-feedback">
+            <div *ngIf="fn.confirm.errors.required">Contraseña  es requerido</div>
+            <div *ngIf="fn.confirm.errors.minlength">Contraseña  es muy corta</div>
+            <div *ngIf="fn.confirm.errors.pattern"> Contraseña no machea</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5 align-self-center">
+            <button class="btn w-100" [disabled]="loading" >
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              crear cuenta</button>
+          </div>
+          <div class="col-sm-12">
+            <p>Al registrame declaro que soy mayor de edad y acepto los <a href="#">Términos y condiciones</a> y las <a
+              href="#">Políticas de privacidad</a> de Mundo Naturali</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #comercial>
+  <div class="d-flex justify-content-center pt-30 pb-5">
+    <div class="form-1 col-sm-8 col-md-6 col-lg-4">
+      <form class="mx-2" [formGroup]="commerciant" (ngSubmit)="onSubmit()">
+        <div class="row pt-5 pb-3">
+          <h3 class="text-left col-sm-8">Creá tu cuenta de comercio!</h3>
+          <a class="align-self-center col text-right" (click)="onChangeView()">Crear una cuenta personal</a>
+        </div>
+        <div class="form-group">
+          <label class="required" for="store">Nombre del Comercio</label>
+          <input type="text" class="form-control" formControlName="name" id="store"
+                 [ngClass]="{ 'is-invalid': submitted && fc.name.errors }" required/>
+          <div *ngIf="submitted && fc.name.errors" class="invalid-feedback">
+            <div *ngIf="fc.name.errors.required">Nombre del comecrio es requerido</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="required" for="cuit">CUIT</label>
+          <input type="text" class="form-control" formControlName="taxId" id="cuit"
+                 [ngClass]="{ 'is-invalid': submitted && fc.taxId.errors }" required/>
+          <div *ngIf="submitted && fc.taxId.errors" class="invalid-feedback">
+            <div *ngIf="fc.taxId.errors.required">CUIT es requerido</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="required" for="email1">Email</label>
+          <input type="email" class="form-control" formControlName="email" id="email1"
+                 [ngClass]="{ 'is-invalid': submitted && fc.email.errors }" required/>
+          <div *ngIf="submitted && fc.email.errors" class="invalid-feedback">
+            <div *ngIf="fc.email.errors.required">Correo  es requerido</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-sm-6">
+            <label class="required" for="password1">Contraseña</label>
+            <input type="password" class="form-control" formControlName="password" minlength="6"
+                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="password1"
+                   [ngClass]="{ 'is-invalid': submitted && fc.password.errors }" required/>
+            <div *ngIf="submitted && fc.password.errors" class="invalid-feedback">
+              <div *ngIf="fc.password.errors.required">Contraseña  es requerido</div>
+              <div *ngIf="fc.password.errors.minlength">Contraseña  es muy corta</div>
+              <div *ngIf="fc.password.errors.pattern"> Contraseña no cumple con los parametros de seguridad</div>
+            </div>
+            <p class="mb-0">La contraseña debe contener al menos <span class="text-danger">6 caracteres</span></p>
+          </div>
+          <div class="form-group col-sm-6">
+            <label class="required" for="confirm1">Confirmar la Contraseña</label>
+            <input type="password" class="form-control" formControlName="confirm" minlength="6"
+                   pattern="{{fc.password.value }}" id="confirm1"
+                   [ngClass]="{ 'is-invalid': submitted && fc.confirm.errors }" required/>
+            <div *ngIf="submitted && fc.confirm.errors" class="invalid-feedback">
+              <div *ngIf="fc.confirm.errors.required">Contraseña  es requerido</div>
+              <div *ngIf="fc.confirm.errors.minlength">Contraseña  es muy corta</div>
+              <div *ngIf="fc.confirm.errors.pattern"> Contraseña no machea</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5 align-self-center">
+            <button class="btn w-100" [disabled]="loading" >
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              crear cuenta</button>
+          </div>
+          <div class="col-sm-12">
+            <p>Al registrame declaro que soy mayor de edad y acepto los <a href="#">Términos y condiciones</a> y las <a
+              href="#">Políticas de privacidad</a> de Mundo Naturali</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</ng-template>
+
+<app-footer [small]="true" ></app-footer>

@@ -1,0 +1,16 @@
+<div class="row profile-container">
+  <div class="col-6">
+    <a class="navbar-brand mr-3" href="#">
+      <img alt="Mundo Naturali" class="pb-3" src="../../../../assets/img/logo.png">
+      <span>mundo naturali</span>
+    </a>
+    <nb-icon  icon="menu-outline"  pack="eva" [options]="{ animation: { type: 'zoom' } }" (click)="toggle()"></nb-icon>
+  </div>
+  <div class="col-6" fxLayout="row" fxLayoutAlign="flex-end">
+    <nb-user size="medium"
+             [name]="user.name"
+             [title]="user.rol"
+             color="#cccccc">
+    </nb-user>
+  </div>
+</div>

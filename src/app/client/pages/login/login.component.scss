@@ -1,0 +1,114 @@
+body {
+
+  background-color: rgb(252, 250, 244);
+  overflow-x: hidden;
+
+  nav {
+    background-color: #FFF;
+  }
+
+  .form-1 {
+    background: white;
+    border-radius: 10px;
+    padding: 0px 4em;
+    width: 610px;
+    &:before {
+      content: "";
+      background: url('../../../../assets/img/frutas.svg') no-repeat;
+      height: 200px;
+      width: 160px;
+      position: absolute;
+      left: 19%;
+      top: 32%;
+      z-index: -1;
+    }
+    input {
+      background-color: var(--input-background);
+      &.form-control {
+        border-radius: 0px;
+      }
+    }
+    a {
+      font-weight: 400;
+      font-size: 14px;
+      font-family: var(--font-source-pro);
+      color: rgb(237, 107, 0) !important;
+      &.facebook {
+        background: darkblue;
+        color: white !important;
+        border-radius: 25px;
+        width: 300px;
+        font-weight: bold;
+        i {
+          font-size: 17px;
+        }
+      }
+      &.google {
+        background: lightgray;
+        color: black !important;
+        border-radius: 25px;
+        width: 300px;
+        font-weight: bold;
+      }
+      &.btn-link {
+        border-radius: 25px;
+        border: solid 1px green;
+        color: rgb(128,128,128) !important;
+        text-decoration: none;
+      }
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 24px;
+      font-family: var(--font-source-pro);
+    }
+
+    h5 {
+      font-weight: 400;
+      font-size: 24px;
+      font-family: var(--font-bree-regular);
+      color: var(--green-button);
+    }
+
+    label {
+      font-weight: 200;
+      font-size: 16px;
+      font-family: var(--font-source-pro);
+      color: var(--input-label-color);
+      margin-bottom: 0;
+    }
+
+    span {
+      font-weight: 200;
+      font-size: 16px;
+      font-family: var(--font-source-pro);
+      color: lightgray;
+    }
+
+    p {
+      font-weight: lighter;
+      font-size: 14px;
+      font-family: var(--font-source-pro);
+      color: #808080;
+    }
+
+    button {
+      font-weight: 700;
+      font-size: 14px;
+      font-family: var(--font-source-pro);
+      background-color: var(--green-button);
+      color: #FFF;
+      border-radius: 20px;
+
+      &:hover {
+        color: green;
+      }
+    }
+
+    .data-user {
+      background: #F0F0F0 !important;
+    }
+  }
+
+}

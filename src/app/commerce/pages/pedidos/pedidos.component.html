@@ -1,0 +1,46 @@
+
+  <p>AQUI VA EL BREADCRUMB</p>
+
+
+  <section class='encabezado pt-4 pl-5'>
+    <p class='p_pedidos' style='font-size: 24px'>Pedidos
+      <span class='size-16 pl-3 span_pedidos' >Mensajes Nuevos</span>
+      <span class='size-16 ml-3 span_badge' >1</span>
+    </p>
+  </section>
+  <section class='tabset'>
+    <div class='container-fluid'>
+      <div class='row rowtabs pt-3'>
+        <div class='col-6'>
+          <ul class='tabs mb-0'>
+            <li class="text-uppercase" [class.active]="viewMode1 == 1" (click)="viewMode1 =1">en curso</li>
+            <li class="text-uppercase" [class.active]="viewMode1 == 2" (click)="viewMode1 =2">recibidos</li>
+            <li class="text-uppercase" [class.active]="viewMode1 == 3" (click)="viewMode1 =3">cancelados</li>
+          </ul>
+        </div>
+        <div class='col-6 align-self-end pb-3'>
+          <form class="form-inline col-md-9" style='float: right'>
+            <div class="input-group col-12">
+              <input class="form-control searsh" type="text">
+              <div class="input-group-append">
+                <button class="btn btn-searsh" type="button">
+                  <i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class='row container-tabs' [ngSwitch]="viewMode1">
+        <div *ngSwitchCase="1">
+          <div class="radio-item">
+            <input type="radio" id="ritema" name="ritem" value="yes">
+            <label for="ritema">Sí</label>
+          </div>
+        </div>
+        <div *ngSwitchCase="2"><p>recibidos</p></div>
+        <div *ngSwitchCase="3"><p>cancelados</p></div>
+      </div>
+    </div>
+  </section>
+
+

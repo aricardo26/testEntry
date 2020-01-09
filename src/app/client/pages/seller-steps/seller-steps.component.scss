@@ -1,0 +1,119 @@
+body {
+  background-color: var(--arena_fondo);
+
+  .form-1 {
+    background: white;
+    border-radius: 10px;
+    input {
+      background-color: var(--input-background);
+    }
+    a {
+      font-weight: 400;
+      font-size: 14px;
+      font-family: var(--font-source-pro);
+      color: rgb(237, 107, 0) !important;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 24px;
+      font-family: var(--font-source-pro);
+    }
+
+    h5 {
+      font-weight: 400;
+      font-size: 24px;
+      font-family: var(--font-bree-regular);
+      color: var(--green-button);
+      span {
+        font-size: 16px;
+        font-family: var(--font-source-pro);
+        color: grey;
+      }
+    }
+    h6 {
+      font-size: 18px;
+      font-family: var(--font-source-semibold);
+      color: black;
+    }
+
+    label {
+      font-size: 14px;
+      font-family: var(--font-source-ligth);
+      color: var(--input-label-color);
+    }
+
+    p {
+      font-weight: lighter;
+      font-size: 14px;
+      font-family: var(--font-source-pro);
+      color: #808080;
+    }
+
+    .custom-control-input {
+      &:checked ~ .custom-control-label::before {
+        border-color: orange;
+        background-color: orange;
+      }
+      &:checked ~ .custom-control-label {
+        &::after {
+          background-image: unset;
+        }
+      }
+    }
+
+    button {
+      font-size: 18px;
+      border-radius: 5px;
+      border: none;
+      width: 200px;
+      height: 40px;
+
+      &.next {
+        font-family: var(--font-source-semibold);
+        background-color: var(--green-button);
+        color: #FFF;
+      }
+      &.prev {
+        font-family: var(--font-source-regular);
+        background-color: white;
+        color: #909090;
+        border: #909090 solid 1px;
+      }
+      &:hover {
+        color: var(--ngreen);
+      }
+    }
+
+    .data-user {
+      background: #F0F0F0 !important;
+    }
+  }
+  .data-user {
+    h4 {
+      font-weight: 600;
+      font-size: 18pt;
+      font-family: 'Source Sans Pro';
+    }
+
+    h6 {
+      font-weight: 200;
+      font-size: 12pt;
+      font-family: 'Source Sans Pro';
+      color: #666666;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 17pt;
+      font-family: 'Source Sans Pro';
+      color: black;
+    }
+
+  }
+
+  .shadow-form {
+    box-shadow: 5px 3px 5px 0px #949393;
+    z-index: 1;
+  }
+}

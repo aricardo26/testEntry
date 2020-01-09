@@ -1,0 +1,59 @@
+.box_why{
+  border: solid 1px #F0F0F0;
+  height: auto;
+  width: 600px;
+  background-color: #EFEFEF;
+  border-radius: 15px;
+  padding: 2rem 3rem;
+  &:before {
+    content: "";
+    background-image: url('../../../../../assets/img/hojitas-01.svg');
+    background-repeat: no-repeat;
+    background-position: 30px 0px;
+    opacity: 0.4;
+    height: 57px;
+    width: 160px;
+    position: absolute;
+    left: 40%;
+    top: 10%;
+  };
+  .logo{
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 80px;
+    z-index: 5144;
+    padding-bottom: 7rem;
+    padding-left: 7rem;
+    padding-top: 1rem;
+  };
+
+  h5{
+    margin-top: 76px;
+    font-weight: 800;
+    font-size: 16px;
+    font-family: var(--font-source-pro);
+  };
+  p{
+    font-weight: 200;
+    font-size: 16px;
+    font-family: var(--font-source-pro);
+  };
+  .green{
+    font-weight: 800;
+    font-size: 18px;
+    font-family: var(--font-source-pro);
+    color: var(--ngreen);
+  };
+  .color-stroke {
+    stroke: var(--ngreen);
+  }
+
+};
+
+::ng-deep{
+  .modal-content {
+    border: transparent;
+    border-radius: 15px;
+  }
+
+}

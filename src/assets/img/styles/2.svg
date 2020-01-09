@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.16 62.16">
+  <defs>
+    <style>
+      .circle{
+      stroke-width:2px !important;
+      }
+    </style>
+  </defs>
+  <title></title>
+  <g id="Capa_2" data-name="Capa 2">
+    <g id="Layer_1" data-name="Layer 1">
+      <circle id="svgCircle2" cx="31.08" cy="31.08" r="30.08" style="fill:none;stroke:#6b9111;stroke-miterlimit:10;stroke-width:0px"/>
+      <line x1="19.25" y1="42.93" x2="9.92" y2="52.33"
+            style="fill:none;stroke:#6b9111;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px"/>
+      <line x1="52.28" y1="9.95" x2="41.06" y2="21.14"
+            style="fill:none;stroke:#6b9111;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px"/>
+      <path
+        d="M36.11,53.82l-10.25-.1a4.07,4.07,0,0,1-4.23-4.3l2.61-24.07a2.05,2.05,0,0,1,2.13-1.74l10,.09a2,2,0,0,1,2.09,1.79l1.92,24.13A4.08,4.08,0,0,1,36.11,53.82Z"
+        style="fill:none;stroke:#6b9111;stroke-miterlimit:10;stroke-width:2px"/>
+      <path d="M37.19,23.78a5.85,5.85,0,1,0-11.7-.1"
+            style="fill:none;stroke:#6b9111;stroke-miterlimit:10;stroke-width:2px"/>
+      <circle cx="28.23" cy="14.09" r="0.43"
+              style="fill:none;stroke:#6b9111;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px"/>
+      <circle cx="33.92" cy="13.18" r="0.43"
+              style="fill:none;stroke:#6b9111;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px"/>
+      <circle cx="31.87" cy="9.14" r="0.43"
+              style="fill:none;stroke:#6b9111;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<app-headers [login]="true" [help]="true"></app-headers>
+
+<ng-template [ngIf]="!logged" [ngIfElse]="loggedCheck">
+  <h1 class="mt-5 pt-5 text-center">Confirme su cuenta via correo electronico {{name}}</h1>
+</ng-template>
+
+<ng-template #loggedCheck>
+  <h1 class="mt-5 pt-5 text-center">Gracias por confirmar su cuenta {{name}}</h1>
+</ng-template>
+
+<app-footer [phrase]="true"></app-footer>

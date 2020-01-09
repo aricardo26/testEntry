@@ -1,0 +1,170 @@
+.card-noch {
+  .image-side{
+    background: grey;
+    height:250px;
+  };
+  .text-side{
+    h5 {
+      font-family: var(--ngreen);
+      font-weight: 400;
+      font-size: 20pt;
+    };
+    p {
+      font-family: var(--font-source-pro);;
+      font-weight: 400;
+      font-size: 16pt;
+      a {
+        color:#ED6B00;
+      };
+    };
+  };
+};
+.left-arrow-noch {
+  padding-left:2rem;
+  &:before {
+    content: "";
+    height: 130px;
+    width: 70px;
+    background-image: url('../../../../assets/img/carrusel_icon_izq.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -43px;
+    top: 25%;
+    z-index: 200;
+  };
+};
+.right-arrow-noch {
+  padding-right:2rem;
+  &:before {
+    content: "";
+    height: 130px;
+    width: 70px;
+    background-image: url('../../../../assets/img/carrusel_icon_der.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -44px;
+    top: 25%;
+    z-index: 200;
+  };
+};
+.card-jobs {
+  background: white !important;
+  .image-side{
+    height:350px;
+  }
+  .text-side{
+    h5 {
+      font-family: var(--ngreen);
+      font-weight: 400;
+      font-size: 30pt;
+      color:var(--ngreen);
+    };
+    p {
+      font-family: var(--font-source-pro);;
+      font-weight: 400;
+      font-size: 16pt;
+    };
+    button {
+      background: white;
+      color:var(--ngreen);
+      font-family: var(--font-source-pro);;
+      font-weight: 400;
+      font-size: 18pt;
+      border-radius:30px;
+      border: var(--ngreen) solid 1px;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin-top: 4rem;
+    }
+  };
+  .right-arrow-noch {
+    padding-right:0;
+  }
+};
+.card-provaiders {
+  background: white !important;
+  .image-side{
+    height:350px;
+  }
+  .text-side{
+    h3 {
+      font-family: var(--font-bree-regular);
+      font-weight: 400;
+      font-size: 30pt;
+    };
+    h5 {
+      font-family: var(--font-leisha);
+      font-weight: 400;
+      font-size: 42pt;
+      color:#B1B1B1;
+    };
+    p {
+      font-family: var(--font-source-pro);
+      font-weight: 200;
+      font-size: 16pt;
+    };
+  };
+  .text-side-quote{
+    h4{
+      font-family: var(--font-source-pro);
+      font-weight: 400;
+      font-size: 16pt;
+      position: relative;
+      top: 17%;
+      left: 10%;
+    };
+    p {
+      font-family: var(--font-source-pro);
+      font-weight: 300;
+      font-size: 22pt;
+      position: relative;
+      top: 17%;
+    };
+    &:before {
+      content: "";
+      height: 100px;
+      width: 100px;
+      background-image: url('../../../../assets/img/coment.svg');
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 5%;
+    };
+  };
+};
+.card-products-saler{
+  width:13rem;
+  margin:5px 8px;
+  border:0;
+  h5{
+    font-family: var(--font-source-pro);
+    font-weight: 800;
+    font-size: 18pt;
+    margin-bottom: 0;
+  };
+  p{
+    font-family: var(--font-source-pro);
+    font-weight: 400;
+    font-size: 14pt;
+    color:#4D4D4D;
+    margin-bottom: 0;
+  };
+  label{
+    font-family: var(--font-source-pro);
+    font-weight: 400;
+    font-size: 15pt;
+    color:#B1B1B1;
+  };
+  button{
+    color: var(--ngreen);
+    background: transparent;
+    border: var(--ngreen) solid 2px;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: 700;
+  };
+};

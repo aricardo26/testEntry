@@ -1,0 +1,261 @@
+<!--NAVBAR-->
+<app-headers [help]="true" [account]="true" [notify]="true" [cart]="true"></app-headers>
+<section class="pt-30">
+  <app-stepper [linear]="false" selectedIndex="1">
+    <cdk-step label="crear cuenta" [completed]="step1Completed"></cdk-step>
+    <cdk-step label="datos del vendedor" [completed]="step2Completed">
+      <div class="container justify-content-center pt-2">
+        <div class="row form-1">
+          <form class="col-8 shadow-form" [formGroup]="step2">
+            <h5 class="text-left pt-3">2. Contanos más sobre tu negocio</h5>
+            <h6 class="mt-5">Domicilio fiscal</h6>
+            <div class="form-group">
+              <label for="address" class="text-uppercase required">direccion (calle, número de casa o edificio, piso,
+                departamento)</label>
+              <input class="form-control" type="text" formControlName="address" id="address"
+                     [ngClass]="{ 'is-invalid': st2.address.errors && st2.address.touched }" required/>
+              <div *ngIf="st2.address.errors && st2.address.touched" class="invalid-feedback">
+                <div *ngIf="st2.address.errors.required">Este campo es requerido</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="text-uppercase required" for="city">ciudad</label>
+              <input class="form-control" type="text" formControlName="city" id="city"
+                     [ngClass]="{ 'is-invalid': st2.city.errors && st2.city.touched }" required/>
+              <div *ngIf="st2.city.errors && st2.city.touched" class="invalid-feedback">
+                <div *ngIf="st2.city.errors.required">Este campo es requerido</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-7">
+                <label class="text-uppercase required" for="state">estado/ provincia</label>
+                <input class="form-control" type="text" formControlName="state" id="state"
+                       [ngClass]="{ 'is-invalid': st2.state.errors && st2.state.touched }" required/>
+                <div *ngIf="st2.state.errors && st2.state.touched" class="invalid-feedback">
+                  <div *ngIf="st2.state.errors.required">Este campo es requerido</div>
+                </div>
+              </div>
+              <div class="form-group col-5">
+                <label class="text-uppercase required" for="zip">código postal</label>
+                <input class="form-control" type="text" formControlName="zip" id="zip"
+                       [ngClass]="{ 'is-invalid': st2.zip.errors && st2.zip.touched }" required/>
+                <div *ngIf="st2.zip.errors && st2.zip.touched" class="invalid-feedback">
+                  <div *ngIf="st2.zip.errors.required">Este campo es requerido</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="text-uppercase" for="phone">teléfono</label>
+              <input class="form-control col-7" type="tel" formControlName="phone" id="phone"/>
+            </div>
+
+            <button class="nav-button float-left prev mt-5 mb-2" cdkStepperPrevious>&larr; Ir al paso anterior</button>
+            <button class="nav-button float-right next mt-5 mb-2" cdkStepperNext>Continuar</button>
+          </form>
+          <div class="col-4 data-user">
+            <div class="pl-2">
+              <h4 class="pt-5 text-uppercase">DATOS BÁSICOS</h4>
+              <div>
+                <h6 class="pt-2 text-uppercase">NOMBRE DEL NEGOCIO (RAZÓN SOCIAL)</h6>
+                <p>{{name}}</p>
+              </div>
+              <div>
+                <h6 class="pt-2 text-uppercase">CUIT</h6>
+                <p>{{taxId}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </cdk-step>
+    <cdk-step label="pagos / depósitos" [completed]="step3Completed">
+      <div class="container justify-content-center pt-2">
+        <div class="row form-1">
+          <form class="col-8 shadow-form" [formGroup]="step3">
+            <h5 class="text-left pt-3">3. Configurá tu modo de pagos y depósitos <br>
+              <span>Completá los datos a continuación para una mejor facturación </span>
+            </h5>
+            <h6 class="mt-5">Pagos con tarjetas</h6>
+            <div class="form-group">
+              <label class="text-uppercase required" for="account">número de tarjeta</label>
+              <input class="form-control col-6" type="number" formControlName="account" id="account"
+                     [ngClass]="{ 'is-invalid': st3.account.errors && st3.account.touched }" required/>
+              <div *ngIf="st3.account.errors && st3.account.touched" class="invalid-feedback">
+                <div *ngIf="st3.account.errors.required">Este campo es requerido</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="text-uppercase required" for="owner">Nombre y apellidos del titular</label>
+              <input class="form-control" type="text" formControlName="owner" id="owner"
+                     [ngClass]="{ 'is-invalid': st3.owner.errors && st3.owner.touched }" required/>
+              <div *ngIf="st3.owner.errors && st3.owner.touched" class="invalid-feedback">
+                <div *ngIf="st3.owner.errors.required">Este campo es requerido</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-4">
+                <label class="text-uppercase required" for="date">Fecha de expiración</label>
+                <input class="form-control" type="date" formControlName="date" id="date"
+                       [ngClass]="{ 'is-invalid': st3.date.errors && st3.date.touched }" required/>
+                <div *ngIf="st3.date.errors && st3.date.touched" class="invalid-feedback">
+                  <div *ngIf="st3.date.errors.required">Este campo es requerido</div>
+                </div>
+              </div>
+              <div class="form-group col-3">
+                <label class="text-uppercase required" for="code">Código de seguridad
+                  <span class="fa-question-circle far text-warning"
+                        data-toggle="tooltip" data-placement="top"
+                        title="Codigo de seguridad usado por las targetas"></span>
+                </label>
+                <input class="form-control" type="number" formControlName="code" id="code"
+                       [ngClass]="{ 'is-invalid': st3.code.errors && st3.code.touched }" required/>
+                <div *ngIf="st3.code.errors && st3.code.touched" class="invalid-feedback">
+                  <div *ngIf="st3.code.errors.required">Este campo es requerido</div>
+                </div>
+              </div>
+            </div>
+            <h6 class="mt-5">Configurá tus depósitos</h6>
+            <h5>
+              <span>Completá la información de  tu cuenta bancaria donde querés recibir los
+                pagos de tu ventas en Mundo Naturali</span>
+            </h5>
+            <div class="form-group">
+              <label class="text-uppercase required" for="bank">nombre del banco</label>
+              <input class="form-control" type="text" formControlName="bank" id="bank"
+                     [ngClass]="{ 'is-invalid': st3.bank.errors && st3.bank.touched }" required/>
+              <div *ngIf="st3.bank.errors && st3.bank.touched" class="invalid-feedback">
+                <div *ngIf="st3.bank.errors.required">Este campo es requerido</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="text-uppercase required" for="titular">titular de la cuenta</label>
+              <input class="form-control" type="text" formControlName="titular" id="titular"
+                     [ngClass]="{ 'is-invalid': st3.titular.errors && st3.titular.touched }" required/>
+              <div *ngIf="st3.titular.errors && st3.titular.touched" class="invalid-feedback">
+                <div *ngIf="st3.titular.errors.required">Este campo es requerido</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label class="text-uppercase required" for="numero_cuenta">Número de cuenta</label>
+                <input class="form-control" type="number" formControlName="numero_cuenta" id="numero_cuenta"
+                       [ngClass]="{ 'is-invalid': st3.numero_cuenta.errors && st3.numero_cuenta.touched }" required/>
+                <div *ngIf="st3.numero_cuenta.errors && st3.numero_cuenta.touched" class="invalid-feedback">
+                  <div *ngIf="st3.numero_cuenta.errors.required">Este campo es requerido</div>
+                </div>
+              </div>
+              <div class="form-group col">
+                <label class="text-uppercase required" for="cbu">Cbu / alias</label>
+                <input class="form-control" type="number" formControlName="cbu" id="cbu"
+                       [ngClass]="{ 'is-invalid': st3.cbu.errors && st3.cbu.touched }" required/>
+                <div *ngIf="st3.cbu.errors && st3.cbu.touched" class="invalid-feedback">
+                  <div *ngIf="st3.cbu.errors.required">Este campo es requerido</div>
+                </div>
+              </div>
+            </div>
+            <button class="nav-button float-left prev mt-5 mb-2" cdkStepperPrevious>&larr; Ir al paso anterior</button>
+            <button class="nav-button float-right next mt-5 mb-2" cdkStepperNext>Continuar</button>
+          </form>
+          <div class="col-4 data-user">
+            <div class="pl-2">
+              <h4 class="pt-5 text-uppercase">DATOS BÁSICOS</h4>
+              <div>
+                <h6 class="pt-2 text-uppercase">NOMBRE DEL NEGOCIO (RAZÓN SOCIAL)</h6>
+                <p>{{name}}</p>
+              </div>
+              <div>
+                <h6 class="pt-2 text-uppercase">CUIT</h6>
+                <p>{{taxId}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </cdk-step>
+    <cdk-step label="datos fiscales" [completed]="step4Completed">
+      <div class="container justify-content-center pt-2">
+        <div class="row form-1">
+          <form class="col-8 shadow-form" [formGroup]="step4">
+            <h5 class="text-left pt-3">4. Completá tus datos fiscales </h5>
+            <h6 class="mt-5">Seleccioná el tipo de contribuyente </h6>
+            <div class="form-group">
+              <select class="form-control" formControlName="tributo" id="tributo"
+                      [ngClass]="{ 'is-invalid': st4.tributo.errors && st4.tributo.touched }" required>
+                <option value="">Monotributo / IVA responsable inscripto / IVA exento</option>
+                <option value="Monotributo">Monotributo</option>
+                <option value="IVARI">IVA responsable inscripto</option>
+                <option value="IVAE">IVA exento</option>
+              </select>
+              <div *ngIf="st4.tributo.errors && st4.tributo.touched" class="invalid-feedback">
+                <div *ngIf="st4.tributo.errors.required">Este campo es requerido</div>
+              </div>
+            </div>
+            <h6>Tenés alguno tipo de exclusión de IVA</h6>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="customRadioInline1" name="customRadioInline1" value="true"
+                     (change)="iva = !iva" formControlName="customRadioInline1" class="custom-control-input">
+              <label class="custom-control-label" for="customRadioInline1">Sí tengo</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="customRadioInline2" name="customRadioInline1" value="false"
+                     (change)="iva = !iva" formControlName="customRadioInline1" class="custom-control-input">
+              <label class="custom-control-label" for="customRadioInline2">No tengo</label>
+            </div>
+            <h6>Adjuntá el certificado de exclusión</h6>
+            <fieldset [disabled]="iva">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile" lang="es" formControlName="file1">
+                <label class="custom-file-label" for="customFile">Choose file</label>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-2">
+                  <label class="text-uppercase required" for="from">desde</label>
+                  <input class="form-control" type="text" formControlName="from" required id="from"/>
+                </div>
+                <div class="form-group col-2">
+                  <label class="text-uppercase required" for="to">hasta</label>
+                  <input class="form-control" type="text" formControlName="to" required id="to"/>
+                </div>
+              </div>
+            </fieldset>
+            <h6>A qué régimen de ingresos brutos pertenecés</h6>
+            <div class="form-group">
+              <input class="form-control" type="text" formControlName="ingresos" required id="ingresos"
+                     placeholder="Local / Simplificado / Convenio multilateral"/>
+            </div>
+            <h6>Ingresá los datos de ingresos brutos</h6>
+            <div class="form-group">
+              <input class="form-control" type="text" formControlName="ingresos_brutos" required id="ingresos_brutos"/>
+            </div>
+            <h6>Formulario de Inscripción</h6>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="customFile2" lang="es" formControlName="file2">
+              <label class="custom-file-label" for="customFile2">Choose file</label>
+            </div>
+
+            <button class="nav-button float-left prev mt-5 mb-2" cdkStepperPrevious>&larr; Ir al paso anterior</button>
+            <button class="nav-button float-right next mt-5 mb-2" cdkStepperNext>Finalizar</button>
+          </form>
+          <div class="col-4 data-user">
+            <div class="pl-2">
+              <h4 class="pt-5 text-uppercase">DATOS BÁSICOS</h4>
+              <div>
+                <h6 class="pt-2 text-uppercase">NOMBRE DEL NEGOCIO (RAZÓN SOCIAL)</h6>
+                <p>Nombre de la Empresa</p>
+              </div>
+              <div>
+                <h6 class="pt-2 text-uppercase">CUIT</h6>
+                <p>0000000000000</p>
+              </div>
+              <div>
+                <h6 class="pt-2 text-uppercase">TIPO DE CUENTA</h6>
+                <p>monotributo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </cdk-step>
+  </app-stepper>
+</section>
+<app-footer [small]="true" [phrase]="false"></app-footer>

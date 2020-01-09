@@ -1,0 +1,8 @@
+<nb-card accent="warning">
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings" [source]="units"
+                     (deleteConfirm)="onDeleteConfirm($event)"
+                     (editConfirm)="onSaveConfirm($event)"
+                     (createConfirm)="onCreateConfirm($event)" ></ng2-smart-table>
+  </nb-card-body>
+</nb-card>

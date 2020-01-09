@@ -1,0 +1,77 @@
+<ng-template [ngIf]="type === 'promotions'">
+  <section id="promotions_cards">
+      <div class="row ml-0 mr-0">
+        <owl-carousel
+          [options]=carouselOptions
+          [items]=promotions
+          [carouselClasses]=carouselClassPromotions class="justify-content-center promtions-carousel">
+          <div class="card overlay-card" *ngFor="let promotion of promotions" style="width: 18rem;" [ngStyle]="{'backgroundColor': promotion.color} ">
+            <div class="card-body">
+              <div class="row">
+                <div class="icon-card col-sm-2">
+                  <i class="icon"  [ngStyle]="{'background-image':'url(../../../assets/img/promotions/'+promotion.icon}"></i>
+                </div>
+                <div class="col-sm-9">
+                  <h5 class="card-title">{{promotion.title}}</h5>
+                  <h6 class="card-subtitle">{{promotion.subtitle}}o</h6>
+                  <p class="card-text">{{promotion.text}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </owl-carousel>
+      </div>
+  </section>
+</ng-template>
+<ng-template [ngIf]="type === 'most_seller'">
+  <section id="most_seller">
+    <div class="row ml-0 mr-0">
+        <owl-carousel
+          [options]=carouselOptions
+          [items]=promotions
+          [carouselClasses]=carouselClassPromotions class="seller_width">
+          <div class="card card-products-saler" *ngFor="let promotion of promotions">
+            <div style="max-width:180px; align-self: center"  >
+              <img class="card-img-top" src="../assets/img/{{promotion.img}}" alt="Card image cap"  width="auto" height="140px">
+            </div>
+            <div class="card-body p-0">
+              <h5 class="card-title"><span class="font-source-pro-light">$</span>{{promotion.price}}</h5>
+              <p>{{promotion.name}}</p>
+              <label class="mb-0">{{promotion.details}}</label><br>
+              <a href="#" class="location" *ngIf="location">
+                <i class="fa fa-map-marker-alt fa-lg mr-2"></i>EN {{promotion.location}}
+              </a>
+            </div>
+            <button class="btn btn-primary" type="button"><i class="fa fa-plus" ></i></button>
+          </div>
+        </owl-carousel>
+      </div>
+  </section>
+</ng-template>
+<ng-template [ngIf]="type === 'opiniones'">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p class="font-bree-regular " style="font-size: 28px">
+          Educar para una vida sana
+        </p>
+        <p class="size-18 font-source-pro-light">
+          Inspiramos a nuestros grupos de interés, a través de acciones de promoción y educación
+          a desarrollar hábitos sanos y tomar las mejores opciones en el consumo de alimentos saludables.
+        </p>
+      </div>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-3">
+            <img src="../../../../assets/img/2.png" alt="" style="border-radius: 50%">
+          </div>
+          <div class="col-9">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+
